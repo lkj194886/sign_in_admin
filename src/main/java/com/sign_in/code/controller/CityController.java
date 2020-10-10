@@ -28,7 +28,7 @@ public class CityController {
 
     @RequestMapping("/getCity")
     @ResponseBody
-    @ApiOperation(value = "天气a", notes = "获取天气")
+    @ApiOperation(value = "天气", notes = "获取天气")
     @CrossOrigin
     String getCity(String city) throws Exception {
         String cid = ReadJsonUtil.getCityCode(city);

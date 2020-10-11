@@ -32,14 +32,13 @@ public class CityServiceImpl implements CityService {
     public String getCity(String cid) throws IOException {
         //先在redis中查询当前天气数据是否存在,如果不存在.重新请求数据并存入在redis中
         if (redisUtil.get(cid) != null) {
+            System.out.println("在redis中查询="+cid);
             return redisUtil.get(cid);
         } else {
-
-
             InputStream input = null;
             try {
                 String city = java.net.URLEncoder.encode(cid, "utf-8");
-                //拼地址
+                //拼接地址
                 String apiUrl = String.format(SOJSON_WEATHER_URL, city);
                 //开始请求
                 URL url = new URL(apiUrl);
@@ -48,6 +47,7 @@ public class CityServiceImpl implements CityService {
                 String result = org.apache.commons.io.IOUtils.toString(input, "utf-8");
                 //将数据存入redis,并设置过期时间
                 redisUtil.set(cid, result, 14400);
+                System.out.println("重新请求的数据=" + cid);
                 return result;
             } catch (Exception e) {
                 log.info(String.valueOf(e));

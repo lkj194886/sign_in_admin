@@ -19,8 +19,6 @@ import java.util.concurrent.TimeUnit;
  */
 @Component
 public class RedisUtil {
-    public static final int TOKEN_EXPIRES_SECOND = 1800;
-
     @Autowired
     private StringRedisTemplate redisTemplate;
 
@@ -45,6 +43,9 @@ public class RedisUtil {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        finally {
+            jedis.close();
+        }
         return result;
     }
 
@@ -56,6 +57,8 @@ public class RedisUtil {
             result = true;
         } catch (Exception e) {
             e.printStackTrace();
+        }finally {
+            jedis.close();
         }
         return result;
     }
@@ -80,6 +83,9 @@ public class RedisUtil {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        finally {
+            jedis.close();
+        }
         return result;
     }
 
@@ -97,6 +103,9 @@ public class RedisUtil {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        finally {
+            jedis.close();
+        }
         return result;
     }
 
@@ -113,6 +122,8 @@ public class RedisUtil {
             result = jedis.get(key);
         } catch (Exception e) {
             e.printStackTrace();
+        }finally {
+            jedis.close();
         }
         return result;
     }
@@ -149,6 +160,7 @@ public class RedisUtil {
         boolean result = false;
         try {
             redisTemplate.delete(key);
+
             result = true;
         } catch (Exception e) {
             e.printStackTrace();

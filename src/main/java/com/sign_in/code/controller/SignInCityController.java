@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/city")
 @Controller
 @Api(value = "CityController | 天气接口")
-public class CityController {
+public class SignInCityController {
 
     @Autowired
     CityService cityService;

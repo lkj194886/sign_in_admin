@@ -1,0 +1,19 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sign_in.code.mapper.WithdrawalMapper">
+<resultMap id="WithdrawalMap" type="com.sign_in.code.entity.SignWithdrawal">
+    <id column="withdrawal_id" property="withdrawalId"/>
+    <result column="withdrawal_sum" property="withdrawalSum"/>
+    <result column="withdrawal_date" property="withdrawalDate"/>
+    <result column="withdrawal_user_id" property="withdrawalUserId"/>
+    <result column="withdrawal_status" property="withdrawalStatus"/>
+</resultMap>
+    <sql id="Base_Withdrawal_list">
+        withdrawal_id,
+        withdrawal_sum,
+        withdrawal_date,
+        withdrawal_user_id,
+        withdrawal_status
+    </sql>
+</mapper>

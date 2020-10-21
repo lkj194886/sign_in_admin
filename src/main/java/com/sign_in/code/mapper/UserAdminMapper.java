@@ -1,5 +1,7 @@
 package com.sign_in.code.mapper;
 
+import com.sign_in.code.entity.SignInUserAdmin;
+
 /**
  * @Classname UserAdminMapper
  * @Description TODO
@@ -7,4 +9,6 @@ package com.sign_in.code.mapper;
  * @Created by wgg
  */
 public interface UserAdminMapper {
+    //管理员登陆
+    public SignInUserAdmin getUserAdmin(String name,String pwd);
 }

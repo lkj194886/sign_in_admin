@@ -1,0 +1,17 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sign_in.code.mapper.UserAdminMapper">
+    <resultMap id="UserAdminResultMap" type="com.sign_in.code.entity.SignInUserAdmin">
+        <id column="user_admin_id" property="userAdminId"/>
+        <result column="user_admin_name" property="userAdminName"/>
+        <result column="user_admin_pwd" property="userAdminPwd"/>
+    </resultMap>
+    <sql id="Base_UserAdmin_List">
+        user_admin_id,user_admin_name,user_admin_pwd
+    </sql>
+    <select id="getUserAdmin" resultMap="UserAdminResultMap">
+
+    </select>
+
+</mapper>

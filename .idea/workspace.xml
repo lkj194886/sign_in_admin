@@ -2,50 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c01dc49-adcb-46c8-b359-1a6d4209e8d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_core_4_4_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_ecs_4_17_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ini4j_ini4j_0_5_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jacoco_org_jacoco_agent_runtime_0_8_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInTableController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInUserAdminController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInVipController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInWithdrawalController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignInUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignInUserAdmin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignInVip.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignWithdrawal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/SignInMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/UserAdminMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/VipMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/WithdrawalMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/service/SignInUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/service/impl/SignInUserImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/util/AliYunUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/util/Md5Util.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/SignInMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserAdminMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/VipMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/WithdrawalMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sign_in_admin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sign_in_admin.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/SignInApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/SignInApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/CityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInCityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/util/RedisUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/util/RedisUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sign_in/code/SignInApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sign_in/code/SignInApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sign_in/code/SignInApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sign_in/code/SignInApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sign_in/code/controller/CityController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sign_in/code/util/RedisUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sign_in/code/util/RedisUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/sign_in/code/SignInApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/sign_in/code/SignInApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/UserAdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/UserAdminMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +19,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="mapper" />
       </list>
     </option>
   </component>
@@ -67,6 +30,10 @@
     <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInUserController.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/service/impl/SignInUserImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/mapper/UserAdminMapper.xml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/mapper/SignInMapper.xml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/mapper/VipMapper.xml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/mapper/WithdrawalMapper.xml" root0="SKIP_INSPECTION" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -150,7 +117,7 @@
       <workItem from="1601970329038" duration="6930000" />
       <workItem from="1602318234302" duration="11604000" />
       <workItem from="1602336560504" duration="22877000" />
-      <workItem from="1602912536484" duration="42423000" />
+      <workItem from="1602912536484" duration="49111000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1602349026907</created>
@@ -187,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602421962122</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="commit">
+      <created>1603196574377</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1603196574378</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,9 +238,10 @@
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
     <state x="491" y="191" key="SettingsEditor/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602348785567" />
-    <state x="540" y="256" key="Vcs.Push.Dialog.v2" timestamp="1602421973600">
-      <screen x="0" y="34" width="1920" height="1046" />
+    <state x="-1380" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603196581814">
+      <screen x="-1920" y="30" width="1920" height="1050" />
     </state>
+    <state x="-1380" y="253" key="Vcs.Push.Dialog.v2/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603196581814" />
     <state x="540" y="256" key="Vcs.Push.Dialog.v2/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602421973600" />
     <state x="770" y="384" key="git4idea.rebase.GitRebaseDialog" timestamp="1602349260890">
       <screen x="0" y="34" width="1920" height="1046" />

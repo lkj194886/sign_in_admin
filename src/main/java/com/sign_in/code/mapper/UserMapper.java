@@ -5,7 +5,7 @@ import org.apache.ibatis.annotations.Param;
 
 /**
  * @Classname UserMapper
- * @Description TODO
+ * @Description TODO 用户mapper
  * @Date 2020/10/20 14:19
  * @Created by wgg
  */

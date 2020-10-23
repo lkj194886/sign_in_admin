@@ -2,7 +2,7 @@ package com.sign_in.code.entity;
 
 /**
  * @Classname SignInUserAdmin
- * @Description TODO
+ * @Description TODO 管理员实体类
  * @Date 2020/10/19 12:58
  * @Created by wgg
  */

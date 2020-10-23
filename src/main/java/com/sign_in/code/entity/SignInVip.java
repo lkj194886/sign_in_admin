@@ -2,7 +2,7 @@ package com.sign_in.code.entity;
 
 /**
  * @Classname SignInVip
- * @Description TODO
+ * @Description TODO vip实体类
  * @Date 2020/10/19 13:03
  * @Created by wgg
  */

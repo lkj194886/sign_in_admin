@@ -9,7 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
+import org.springframework.web.bind.annotation.RestController;
 
 
 /**
@@ -21,15 +21,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/city")
 @Controller
 @Api(value = "CityController | 天气接口")
+@RestController
 public class SignInCityController {
 
     @Autowired
     CityService cityService;
 
     @RequestMapping("/getCity")
-    @ResponseBody
+//    @ResponseBody
     @ApiOperation(value = "天气", notes = "获取天气")
-    @CrossOrigin
+//    @CrossOrigin
     String getCity(String city) throws Exception {
         String cid = ReadJsonUtil.getCityCode(city);
         return cityService.getCity(cid);

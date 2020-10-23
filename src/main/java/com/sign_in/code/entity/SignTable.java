@@ -4,7 +4,7 @@ import java.util.Date;
 
 /**
  * @Classname SignTable
- * @Description TODO
+ * @Description TODO 签到实体类
  * @Date 2020/10/19 13:11
  * @Created by wgg
  */

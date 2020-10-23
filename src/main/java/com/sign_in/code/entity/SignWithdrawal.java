@@ -5,7 +5,7 @@ import java.util.Date;
 
 /**
  * @Classname SignWithdrawal
- * @Description TODO
+ * @Description TODO 提现实体类
  * @Date 2020/10/19 13:07
  * @Created by wgg
  */

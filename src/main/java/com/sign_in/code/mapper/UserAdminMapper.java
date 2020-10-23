@@ -4,7 +4,7 @@ import com.sign_in.code.entity.SignInUserAdmin;
 
 /**
  * @Classname UserAdminMapper
- * @Description TODO
+ * @Description TODO 管理员mapper
  * @Date 2020/10/20 14:19
  * @Created by wgg
  */

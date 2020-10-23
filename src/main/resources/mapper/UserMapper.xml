@@ -9,6 +9,10 @@
         <result column="user_qibi" property="userQiBi"/>
         <result column="user_invitation_id" property="userInvitationId"/>
         <result column="user_invitation_code" jdbcType="VARCHAR" property="userInvitationCode"/>
+        <result column="user_zhifubao" property="userZhiFUBao"/>
+        <result column="user_zhifubao_name" property="userZhiFUBaoName"/>
+        <result column="user_weixin" property="userWeiXin"/>
+        <result column="user_weixin_name" property="userWeiXinName"/>
 <!--        <collection resultMap="UserResultMap"/>-->
         <association property="signInVip" resultMap="VipResultMap"/>
     </resultMap>
@@ -25,7 +29,11 @@
         user_remaining_sum,
         user_qibi,
         user_invitation_id,
-        user_invitation_code
+        user_invitation_code,
+        user_zhifubao,
+        user_zhifubao_name,
+        user_weixin,
+        user_weixin_name
     </sql>
 
     <sql id="Base_Vip_List">

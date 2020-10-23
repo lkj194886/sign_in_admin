@@ -16,9 +16,9 @@ class SignInApplicationTests {
     @Test
     void contextLoads() {
 //        for (int i = 0; i < 100; i++) {
-            int flag = new Random().nextInt(999999);
-            if (flag<100000){
-                flag += 100000;
+            int flag = new Random().nextInt(9999);
+            if (flag<1000){
+                flag += 1000;
             }
             System.out.println(flag);
 //        }

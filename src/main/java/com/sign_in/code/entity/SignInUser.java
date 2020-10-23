@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 /**
  * @Classname SignInUser
- * @Description TODO
+ * @Description TODO 用户实体类
  * @Date 2020/10/18 16:54
  * @Created by wgg
  */
@@ -23,20 +23,15 @@ public class SignInUser {
     private Long userInvitationId;
     //用户邀请码
     private String userInvitationCode;
-
+    //用户支付宝账号
+    private String userZhiFUBao;
+    //用户支付宝姓名
+    private String userZhiFUBaoName;
+    //用户微信账号
+    private String userWeiXin;
+    //用户微信姓名
+    private String userWeiXinName;
     private SignInVip signInVip;
-
-    public SignInUser(){
-
-    }
-    public SignInVip getSignInVip() {
-        return signInVip;
-    }
-
-    public void setSignInVip(SignInVip signInVip) {
-        this.signInVip = signInVip;
-    }
-
 
     @Override
     public String toString() {
@@ -48,9 +43,56 @@ public class SignInUser {
                 ", userQiBi=" + userQiBi +
                 ", userInvitationId=" + userInvitationId +
                 ", userInvitationCode='" + userInvitationCode + '\'' +
+                ", userZhiFUBao='" + userZhiFUBao + '\'' +
+                ", userZhiFUBaoName='" + userZhiFUBaoName + '\'' +
+                ", userWeiXin='" + userWeiXin + '\'' +
+                ", userWeiXinName='" + userWeiXinName + '\'' +
+                ", signInVip=" + signInVip +
                 '}';
     }
 
+    public SignInUser(){
+
+    }
+    public String getUserZhiFUBao() {
+        return userZhiFUBao;
+    }
+
+    public void setUserZhiFUBao(String userZhiFUBao) {
+        this.userZhiFUBao = userZhiFUBao;
+    }
+
+    public String getUserZhiFUBaoName() {
+        return userZhiFUBaoName;
+    }
+
+    public void setUserZhiFUBaoName(String userZhiFUBaoName) {
+        this.userZhiFUBaoName = userZhiFUBaoName;
+    }
+
+    public String getUserWeiXin() {
+        return userWeiXin;
+    }
+
+    public void setUserWeiXin(String userWeiXin) {
+        this.userWeiXin = userWeiXin;
+    }
+
+    public String getUserWeiXinName() {
+        return userWeiXinName;
+    }
+
+    public void setUserWeiXinName(String userWeiXinName) {
+        this.userWeiXinName = userWeiXinName;
+    }
+
+    public SignInVip getSignInVip() {
+        return signInVip;
+    }
+
+    public void setSignInVip(SignInVip signInVip) {
+        this.signInVip = signInVip;
+    }
 
 
     public Long getUserId() {

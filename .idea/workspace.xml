@@ -2,12 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c01dc49-adcb-46c8-b359-1a6d4209e8d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/SignInMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserAdminMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/VipMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/WithdrawalMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/config/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInCityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInCityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignInUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignInUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignInUserAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignInUserAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignInVip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignInVip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignWithdrawal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignWithdrawal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/SignInMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/SignInMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/UserAdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/UserAdminMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/VipMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/VipMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/WithdrawalMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/WithdrawalMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/util/AliYunUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/util/AliYunUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sign_in/code/SignInApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sign_in/code/SignInApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sign_in/code/config/RedisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sign_in/code/config/RedisConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/sign_in/code/SignInApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/sign_in/code/SignInApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +39,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInCityController.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInUserController.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/service/impl/SignInUserImpl.java" root0="SKIP_INSPECTION" />
@@ -117,7 +130,7 @@
       <workItem from="1601970329038" duration="6930000" />
       <workItem from="1602318234302" duration="11604000" />
       <workItem from="1602336560504" duration="22877000" />
-      <workItem from="1602912536484" duration="49111000" />
+      <workItem from="1602912536484" duration="55071000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1602349026907</created>
@@ -161,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603196574378</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="commit">
+      <created>1603262482543</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1603262482543</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,63 +192,63 @@
     <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1151" y="251" key="#com.intellij.ide.util.MemberChooser" timestamp="1603187453544">
+    <state x="-1151" y="251" key="#com.intellij.ide.util.MemberChooser" timestamp="1603458062930">
       <screen x="-1920" y="30" width="1920" height="1050" />
     </state>
-    <state x="-1151" y="251" key="#com.intellij.ide.util.MemberChooser/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603187453544" />
+    <state x="-1151" y="251" key="#com.intellij.ide.util.MemberChooser/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603458062930" />
     <state x="769" y="254" key="#com.intellij.ide.util.MemberChooser/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1603084219560" />
     <state x="711" y="55" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1601978750385">
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
     <state x="711" y="55" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1601978750385" />
-    <state x="-1374" y="42" key="CommitChangelistDialog2" timestamp="1603196568565">
+    <state x="-1374" y="42" key="CommitChangelistDialog2" timestamp="1603262479207">
       <screen x="-1920" y="30" width="1920" height="1050" />
     </state>
-    <state x="-1374" y="42" key="CommitChangelistDialog2/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603196568565" />
+    <state x="-1374" y="42" key="CommitChangelistDialog2/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603262479207" />
     <state x="546" y="46" key="CommitChangelistDialog2/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602421960729" />
     <state x="770" y="304" key="FileChooserDialogImpl" timestamp="1602500535768">
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
     <state x="770" y="304" key="FileChooserDialogImpl/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602500535768" />
-    <state width="1776" height="303" key="GridCell.Tab.0.bottom" timestamp="1603195933348">
+    <state width="1776" height="303" key="GridCell.Tab.0.bottom" timestamp="1603458235147">
       <screen x="-1920" y="30" width="1920" height="1050" />
     </state>
-    <state width="1776" height="303" key="GridCell.Tab.0.bottom/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603195933348" />
+    <state width="1776" height="303" key="GridCell.Tab.0.bottom/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603458235147" />
     <state width="1711" height="303" key="GridCell.Tab.0.bottom/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602735215155" />
-    <state width="1776" height="303" key="GridCell.Tab.0.center" timestamp="1603195933348">
+    <state width="1776" height="303" key="GridCell.Tab.0.center" timestamp="1603458235147">
       <screen x="-1920" y="30" width="1920" height="1050" />
     </state>
-    <state width="1776" height="303" key="GridCell.Tab.0.center/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603195933348" />
+    <state width="1776" height="303" key="GridCell.Tab.0.center/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603458235147" />
     <state width="1711" height="303" key="GridCell.Tab.0.center/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602735215153" />
-    <state width="1776" height="303" key="GridCell.Tab.0.left" timestamp="1603195933348">
+    <state width="1776" height="303" key="GridCell.Tab.0.left" timestamp="1603458235147">
       <screen x="-1920" y="30" width="1920" height="1050" />
     </state>
-    <state width="1776" height="303" key="GridCell.Tab.0.left/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603195933348" />
+    <state width="1776" height="303" key="GridCell.Tab.0.left/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603458235147" />
     <state width="1711" height="303" key="GridCell.Tab.0.left/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602735215152" />
-    <state width="1776" height="303" key="GridCell.Tab.0.right" timestamp="1603195933348">
+    <state width="1776" height="303" key="GridCell.Tab.0.right" timestamp="1603458235147">
       <screen x="-1920" y="30" width="1920" height="1050" />
     </state>
-    <state width="1776" height="303" key="GridCell.Tab.0.right/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603195933348" />
+    <state width="1776" height="303" key="GridCell.Tab.0.right/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603458235147" />
     <state width="1711" height="303" key="GridCell.Tab.0.right/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602735215153" />
-    <state width="1776" height="303" key="GridCell.Tab.1.bottom" timestamp="1603195933349">
+    <state width="1776" height="303" key="GridCell.Tab.1.bottom" timestamp="1603458235147">
       <screen x="-1920" y="30" width="1920" height="1050" />
     </state>
-    <state width="1776" height="303" key="GridCell.Tab.1.bottom/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603195933349" />
+    <state width="1776" height="303" key="GridCell.Tab.1.bottom/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603458235147" />
     <state width="1711" height="303" key="GridCell.Tab.1.bottom/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602735215155" />
-    <state width="1776" height="303" key="GridCell.Tab.1.center" timestamp="1603195933348">
+    <state width="1776" height="303" key="GridCell.Tab.1.center" timestamp="1603458235147">
       <screen x="-1920" y="30" width="1920" height="1050" />
     </state>
-    <state width="1776" height="303" key="GridCell.Tab.1.center/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603195933348" />
+    <state width="1776" height="303" key="GridCell.Tab.1.center/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603458235147" />
     <state width="1711" height="303" key="GridCell.Tab.1.center/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602735215155" />
-    <state width="1776" height="303" key="GridCell.Tab.1.left" timestamp="1603195933348">
+    <state width="1776" height="303" key="GridCell.Tab.1.left" timestamp="1603458235147">
       <screen x="-1920" y="30" width="1920" height="1050" />
     </state>
-    <state width="1776" height="303" key="GridCell.Tab.1.left/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603195933348" />
+    <state width="1776" height="303" key="GridCell.Tab.1.left/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603458235147" />
     <state width="1711" height="303" key="GridCell.Tab.1.left/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602735215155" />
-    <state width="1776" height="303" key="GridCell.Tab.1.right" timestamp="1603195933349">
+    <state width="1776" height="303" key="GridCell.Tab.1.right" timestamp="1603458235147">
       <screen x="-1920" y="30" width="1920" height="1050" />
     </state>
-    <state width="1776" height="303" key="GridCell.Tab.1.right/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603195933349" />
+    <state width="1776" height="303" key="GridCell.Tab.1.right/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603458235147" />
     <state width="1711" height="303" key="GridCell.Tab.1.right/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602735215155" />
     <state x="736" y="167" key="RollbackChangesDialog" timestamp="1602349409331">
       <screen x="0" y="34" width="1920" height="1046" />
@@ -238,10 +258,10 @@
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
     <state x="491" y="191" key="SettingsEditor/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602348785567" />
-    <state x="-1380" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603196581814">
+    <state x="-1380" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603262487798">
       <screen x="-1920" y="30" width="1920" height="1050" />
     </state>
-    <state x="-1380" y="253" key="Vcs.Push.Dialog.v2/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603196581814" />
+    <state x="-1380" y="253" key="Vcs.Push.Dialog.v2/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603262487798" />
     <state x="540" y="256" key="Vcs.Push.Dialog.v2/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602421973600" />
     <state x="770" y="384" key="git4idea.rebase.GitRebaseDialog" timestamp="1602349260890">
       <screen x="0" y="34" width="1920" height="1046" />

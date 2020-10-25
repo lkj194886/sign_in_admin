@@ -31,6 +31,9 @@ public class SignInUser {
     private String userWeiXin;
     //用户微信姓名
     private String userWeiXinName;
+    //是否是合伙人5/0
+
+
     private SignInVip signInVip;
 
     @Override
@@ -54,6 +57,8 @@ public class SignInUser {
     public SignInUser(){
 
     }
+
+
     public String getUserZhiFUBao() {
         return userZhiFUBao;
     }

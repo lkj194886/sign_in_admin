@@ -7,4 +7,5 @@ package com.sign_in.code.mapper;
  * @Created by wgg
  */
 public interface WithdrawalMapper {
+
 }

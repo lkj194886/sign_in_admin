@@ -34,7 +34,6 @@ public class ReadJsonUtil {
             return jsonStr;
         } catch (IOException e) {
             e.printStackTrace();
-
         }
         return null;
     }

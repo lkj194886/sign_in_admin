@@ -1,5 +1,6 @@
 package com.sign_in.code;
 
+import com.sign_in.code.mapper.UserMapper;
 import com.sign_in.code.util.Md5Util;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,8 @@ import java.util.Random;
 @SpringBootTest
 class SignInApplicationTests {
 
+    @Autowired
+    UserMapper userMapper;
 
 
     @Test

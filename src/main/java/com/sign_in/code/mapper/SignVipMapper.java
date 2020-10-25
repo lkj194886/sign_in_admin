@@ -2,6 +2,7 @@ package com.sign_in.code.mapper;
 
 import com.sign_in.code.entity.SignInVip;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
@@ -19,6 +20,5 @@ public interface SignVipMapper {
     //添加新的会员信息
     int addVip(SignInVip signInVip);
     //删除会员
-    int removeVip(@Param("vipID") Long vipID);
-
+    int removeVip(@PathVariable("vipID") Long vipID);
 }

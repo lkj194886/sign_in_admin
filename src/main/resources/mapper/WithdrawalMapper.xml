@@ -16,4 +16,6 @@
         withdrawal_user_id,
         withdrawal_status
     </sql>
+
+
 </mapper>

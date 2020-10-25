@@ -33,8 +33,6 @@ public class SignInUser {
     private String userWeiXinName;
     private SignInVip signInVip;
 
-    private Long userPartnerId;
-
     @Override
     public String toString() {
         return "SignInUser{" +
@@ -50,13 +48,53 @@ public class SignInUser {
                 ", userWeiXin='" + userWeiXin + '\'' +
                 ", userWeiXinName='" + userWeiXinName + '\'' +
                 ", signInVip=" + signInVip +
-                ", userPartnerId=" + userPartnerId +
                 '}';
     }
 
     public SignInUser(){
 
     }
+    public String getUserZhiFUBao() {
+        return userZhiFUBao;
+    }
+
+    public void setUserZhiFUBao(String userZhiFUBao) {
+        this.userZhiFUBao = userZhiFUBao;
+    }
+
+    public String getUserZhiFUBaoName() {
+        return userZhiFUBaoName;
+    }
+
+    public void setUserZhiFUBaoName(String userZhiFUBaoName) {
+        this.userZhiFUBaoName = userZhiFUBaoName;
+    }
+
+    public String getUserWeiXin() {
+        return userWeiXin;
+    }
+
+    public void setUserWeiXin(String userWeiXin) {
+        this.userWeiXin = userWeiXin;
+    }
+
+    public String getUserWeiXinName() {
+        return userWeiXinName;
+    }
+
+    public void setUserWeiXinName(String userWeiXinName) {
+        this.userWeiXinName = userWeiXinName;
+    }
+
+    public SignInVip getSignInVip() {
+        return signInVip;
+    }
+
+    public void setSignInVip(SignInVip signInVip) {
+        this.signInVip = signInVip;
+    }
+
+
     public Long getUserId() {
         return userId;
     }
@@ -113,51 +151,5 @@ public class SignInUser {
         this.userInvitationCode = userInvitationCode;
     }
 
-    public String getUserZhiFUBao() {
-        return userZhiFUBao;
-    }
 
-    public void setUserZhiFUBao(String userZhiFUBao) {
-        this.userZhiFUBao = userZhiFUBao;
-    }
-
-    public String getUserZhiFUBaoName() {
-        return userZhiFUBaoName;
-    }
-
-    public void setUserZhiFUBaoName(String userZhiFUBaoName) {
-        this.userZhiFUBaoName = userZhiFUBaoName;
-    }
-
-    public String getUserWeiXin() {
-        return userWeiXin;
-    }
-
-    public void setUserWeiXin(String userWeiXin) {
-        this.userWeiXin = userWeiXin;
-    }
-
-    public String getUserWeiXinName() {
-        return userWeiXinName;
-    }
-
-    public void setUserWeiXinName(String userWeiXinName) {
-        this.userWeiXinName = userWeiXinName;
-    }
-
-    public SignInVip getSignInVip() {
-        return signInVip;
-    }
-
-    public void setSignInVip(SignInVip signInVip) {
-        this.signInVip = signInVip;
-    }
-
-    public Long getUserPartnerId() {
-        return userPartnerId;
-    }
-
-    public void setUserPartnerId(Long userPartnerId) {
-        this.userPartnerId = userPartnerId;
-    }
 }

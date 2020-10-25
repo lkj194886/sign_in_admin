@@ -12,7 +12,7 @@ import org.apache.ibatis.annotations.Param;
 public interface UserMapper {
     //登陆
     SignInUser getUser(@Param("phone") String phone);
-    //根据ID查询用户
+    //根据邀请人ID查询用户
     SignInUser getUserId(@Param("userInvitationId") Long userInvitationId);
     //添加用户
     int  addUser(SignInUser signInUser);

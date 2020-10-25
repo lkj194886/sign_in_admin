@@ -13,7 +13,8 @@ import java.util.Map;
  * @Created by wgg
  */
 public interface SignInUserService {
-
+//    //登陆
+//    SignInUser getUser(String phone);
     //根据ID查询用户
     Result<Map<String,Object>> getUser(String phone, String phoneCode);
 }

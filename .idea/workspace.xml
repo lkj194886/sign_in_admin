@@ -2,24 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c01dc49-adcb-46c8-b359-1a6d4209e8d2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/service/SignVipService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/service/impl/SignVipServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_20_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_spring4all_swagger_spring_boot_starter_1_7_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_bean_validators_2_8_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_2_8_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_2_8_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_2_8_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_2_8_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_2_8_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_common_2_8_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_8_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_models_1_5_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_21_0_GA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_2_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_reflections_reflections_0_9_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_1_2_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_1_2_0_RELEASE.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/config/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sign_in_admin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sign_in_admin.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInCityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInCityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignInUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignInUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignInUserAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignInUserAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignInVip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignInVip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignWithdrawal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignWithdrawal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/SignInMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/SignInMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/UserAdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/UserAdminMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/VipMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/VipMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/WithdrawalMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/WithdrawalMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/util/AliYunUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/util/AliYunUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sign_in/code/SignInApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sign_in/code/SignInApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sign_in/code/config/RedisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sign_in/code/config/RedisConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/sign_in/code/SignInApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/sign_in/code/SignInApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInVipController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInVipController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/VipMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/SignVipMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/service/SignInUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/service/SignInUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/service/impl/SignInUserImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/service/impl/SignInUserImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/util/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/util/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/VipMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SignVipMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sign_in/code/util/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sign_in/code/util/Result.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +45,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="mapper" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="mapper" />
       </list>
     </option>
   </component>
@@ -40,12 +56,14 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInCityController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/service/impl/SignVipServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInUserController.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/service/impl/SignInUserImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/mapper/UserAdminMapper.xml" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/mapper/SignInMapper.xml" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/main/resources/mapper/VipMapper.xml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInVipController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/mapper/SignVipMapper.xml" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/mapper/WithdrawalMapper.xml" root0="SKIP_INSPECTION" />
   </component>
   <component name="MavenImportPreferences">
@@ -130,7 +148,8 @@
       <workItem from="1601970329038" duration="6930000" />
       <workItem from="1602318234302" duration="11604000" />
       <workItem from="1602336560504" duration="22877000" />
-      <workItem from="1602912536484" duration="55071000" />
+      <workItem from="1602912536484" duration="59296000" />
+      <workItem from="1603507660678" duration="13123000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1602349026907</created>
@@ -181,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603262482543</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="commit">
+      <created>1603458263128</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1603458263128</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,64 +218,65 @@
     <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1151" y="251" key="#com.intellij.ide.util.MemberChooser" timestamp="1603458062930">
+    <state x="-1151" y="251" key="#com.intellij.ide.util.MemberChooser" timestamp="1603565015183">
       <screen x="-1920" y="30" width="1920" height="1050" />
     </state>
-    <state x="-1151" y="251" key="#com.intellij.ide.util.MemberChooser/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603458062930" />
+    <state x="-1151" y="251" key="#com.intellij.ide.util.MemberChooser/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603565015183" />
     <state x="769" y="254" key="#com.intellij.ide.util.MemberChooser/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1603084219560" />
-    <state x="711" y="55" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1601978750385">
-      <screen x="0" y="34" width="1920" height="1046" />
-    </state>
-    <state x="711" y="55" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1601978750385" />
-    <state x="-1374" y="42" key="CommitChangelistDialog2" timestamp="1603262479207">
+    <state x="-1209" y="30" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603562572731">
       <screen x="-1920" y="30" width="1920" height="1050" />
     </state>
-    <state x="-1374" y="42" key="CommitChangelistDialog2/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603262479207" />
+    <state x="-1209" y="30" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603562572731" />
+    <state x="711" y="55" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1601978750385" />
+    <state x="-1374" y="42" key="CommitChangelistDialog2" timestamp="1603458254220">
+      <screen x="-1920" y="30" width="1920" height="1050" />
+    </state>
+    <state x="-1374" y="42" key="CommitChangelistDialog2/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603458254220" />
     <state x="546" y="46" key="CommitChangelistDialog2/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602421960729" />
     <state x="770" y="304" key="FileChooserDialogImpl" timestamp="1602500535768">
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
     <state x="770" y="304" key="FileChooserDialogImpl/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602500535768" />
-    <state width="1776" height="303" key="GridCell.Tab.0.bottom" timestamp="1603458235147">
-      <screen x="-1920" y="30" width="1920" height="1050" />
+    <state width="1706" height="303" key="GridCell.Tab.0.bottom" timestamp="1603606822089">
+      <screen x="0" y="34" width="1920" height="1046" />
     </state>
-    <state width="1776" height="303" key="GridCell.Tab.0.bottom/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603458235147" />
-    <state width="1711" height="303" key="GridCell.Tab.0.bottom/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602735215155" />
-    <state width="1776" height="303" key="GridCell.Tab.0.center" timestamp="1603458235147">
-      <screen x="-1920" y="30" width="1920" height="1050" />
+    <state width="1706" height="303" key="GridCell.Tab.0.bottom/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603567750290" />
+    <state width="1706" height="303" key="GridCell.Tab.0.bottom/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1603606822089" />
+    <state width="1706" height="303" key="GridCell.Tab.0.center" timestamp="1603606822088">
+      <screen x="0" y="34" width="1920" height="1046" />
     </state>
-    <state width="1776" height="303" key="GridCell.Tab.0.center/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603458235147" />
-    <state width="1711" height="303" key="GridCell.Tab.0.center/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602735215153" />
-    <state width="1776" height="303" key="GridCell.Tab.0.left" timestamp="1603458235147">
-      <screen x="-1920" y="30" width="1920" height="1050" />
+    <state width="1706" height="303" key="GridCell.Tab.0.center/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603567750290" />
+    <state width="1706" height="303" key="GridCell.Tab.0.center/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1603606822088" />
+    <state width="1706" height="303" key="GridCell.Tab.0.left" timestamp="1603606822088">
+      <screen x="0" y="34" width="1920" height="1046" />
     </state>
-    <state width="1776" height="303" key="GridCell.Tab.0.left/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603458235147" />
-    <state width="1711" height="303" key="GridCell.Tab.0.left/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602735215152" />
-    <state width="1776" height="303" key="GridCell.Tab.0.right" timestamp="1603458235147">
-      <screen x="-1920" y="30" width="1920" height="1050" />
+    <state width="1706" height="303" key="GridCell.Tab.0.left/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603567750290" />
+    <state width="1706" height="303" key="GridCell.Tab.0.left/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1603606822088" />
+    <state width="1706" height="303" key="GridCell.Tab.0.right" timestamp="1603606822088">
+      <screen x="0" y="34" width="1920" height="1046" />
     </state>
-    <state width="1776" height="303" key="GridCell.Tab.0.right/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603458235147" />
-    <state width="1711" height="303" key="GridCell.Tab.0.right/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602735215153" />
-    <state width="1776" height="303" key="GridCell.Tab.1.bottom" timestamp="1603458235147">
-      <screen x="-1920" y="30" width="1920" height="1050" />
+    <state width="1706" height="303" key="GridCell.Tab.0.right/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603567750290" />
+    <state width="1706" height="303" key="GridCell.Tab.0.right/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1603606822088" />
+    <state width="1706" height="303" key="GridCell.Tab.1.bottom" timestamp="1603606822089">
+      <screen x="0" y="34" width="1920" height="1046" />
     </state>
-    <state width="1776" height="303" key="GridCell.Tab.1.bottom/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603458235147" />
-    <state width="1711" height="303" key="GridCell.Tab.1.bottom/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602735215155" />
-    <state width="1776" height="303" key="GridCell.Tab.1.center" timestamp="1603458235147">
-      <screen x="-1920" y="30" width="1920" height="1050" />
+    <state width="1706" height="303" key="GridCell.Tab.1.bottom/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603567750291" />
+    <state width="1706" height="303" key="GridCell.Tab.1.bottom/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1603606822089" />
+    <state width="1706" height="303" key="GridCell.Tab.1.center" timestamp="1603606822089">
+      <screen x="0" y="34" width="1920" height="1046" />
     </state>
-    <state width="1776" height="303" key="GridCell.Tab.1.center/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603458235147" />
-    <state width="1711" height="303" key="GridCell.Tab.1.center/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602735215155" />
-    <state width="1776" height="303" key="GridCell.Tab.1.left" timestamp="1603458235147">
-      <screen x="-1920" y="30" width="1920" height="1050" />
+    <state width="1706" height="303" key="GridCell.Tab.1.center/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603567750291" />
+    <state width="1706" height="303" key="GridCell.Tab.1.center/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1603606822089" />
+    <state width="1706" height="303" key="GridCell.Tab.1.left" timestamp="1603606822089">
+      <screen x="0" y="34" width="1920" height="1046" />
     </state>
-    <state width="1776" height="303" key="GridCell.Tab.1.left/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603458235147" />
-    <state width="1711" height="303" key="GridCell.Tab.1.left/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602735215155" />
-    <state width="1776" height="303" key="GridCell.Tab.1.right" timestamp="1603458235147">
-      <screen x="-1920" y="30" width="1920" height="1050" />
+    <state width="1706" height="303" key="GridCell.Tab.1.left/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603567750291" />
+    <state width="1706" height="303" key="GridCell.Tab.1.left/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1603606822089" />
+    <state width="1706" height="303" key="GridCell.Tab.1.right" timestamp="1603606822089">
+      <screen x="0" y="34" width="1920" height="1046" />
     </state>
-    <state width="1776" height="303" key="GridCell.Tab.1.right/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603458235147" />
-    <state width="1711" height="303" key="GridCell.Tab.1.right/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602735215155" />
+    <state width="1706" height="303" key="GridCell.Tab.1.right/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603567750291" />
+    <state width="1706" height="303" key="GridCell.Tab.1.right/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1603606822089" />
     <state x="736" y="167" key="RollbackChangesDialog" timestamp="1602349409331">
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
@@ -258,10 +285,10 @@
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
     <state x="491" y="191" key="SettingsEditor/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602348785567" />
-    <state x="-1380" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603262487798">
+    <state x="-1380" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603458264972">
       <screen x="-1920" y="30" width="1920" height="1050" />
     </state>
-    <state x="-1380" y="253" key="Vcs.Push.Dialog.v2/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603262487798" />
+    <state x="-1380" y="253" key="Vcs.Push.Dialog.v2/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603458264972" />
     <state x="540" y="256" key="Vcs.Push.Dialog.v2/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602421973600" />
     <state x="770" y="384" key="git4idea.rebase.GitRebaseDialog" timestamp="1602349260890">
       <screen x="0" y="34" width="1920" height="1046" />
@@ -271,9 +298,10 @@
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
     <state x="750" y="427" key="git4idea.ui.GitResetDialog/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602421937643" />
-    <state x="604" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1603011672934">
-      <screen x="0" y="34" width="1920" height="1046" />
+    <state x="-1316" y="254" width="672" height="681" key="search.everywhere.popup" timestamp="1603564411192">
+      <screen x="-1920" y="30" width="1920" height="1050" />
     </state>
+    <state x="-1316" y="254" width="672" height="681" key="search.everywhere.popup/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603564411192" />
     <state x="604" y="257" width="672" height="678" key="search.everywhere.popup/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1603011672934" />
     <state x="778" y="332" key="svn.repositoryBrowser" timestamp="1602349621331">
       <screen x="0" y="34" width="1920" height="1046" />

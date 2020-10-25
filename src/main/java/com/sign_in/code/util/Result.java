@@ -1,8 +1,6 @@
 package com.sign_in.code.util;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import org.springframework.stereotype.Component;
 
 /**
@@ -13,13 +11,10 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@ApiModel(value = "响应实体类")
+
 public class Result<T> {
-    @ApiModelProperty(value = "code")
     private int code;
-    @ApiModelProperty(value = "msg")
     private String msg;
-    @ApiModelProperty(value = "data")
     private T data;
 
     public Result(){

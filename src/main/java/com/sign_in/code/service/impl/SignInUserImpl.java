@@ -28,11 +28,7 @@ public class SignInUserImpl implements SignInUserService {
 
     RedisUtil redisUtil;
 
-    @Override
-    public SignInUser getUser(String phone) {
-        //获取用户信息
-        return userMapper.getUser(phone);
-    }
+
 
     /**
      * 登陆接口
@@ -41,7 +37,7 @@ public class SignInUserImpl implements SignInUserService {
      * @return 返回用户信息
      */
     @Override
-    public Result<Map<String, Object>> getUserId(String phone, String phoneCode) {
+    public Result<Map<String, Object>> getUser(String phone, String phoneCode) {
         //判断是否存在该手机号的验证码
         if (redisUtil.get(phone) == null) {
             return new Result<>(404, "验证码已失效,请重新获取", null);
@@ -50,6 +46,7 @@ public class SignInUserImpl implements SignInUserService {
             if (phoneCode.equals(redisUtil.get(phone))) {
                 //验证成功,删除redis中的验证码
                 redisUtil.remove(phone);
+
                 //获取登陆用户信息
                 SignInUser signInUser = userMapper.getUser(phone);
                 //获取邀请人邀请码
@@ -57,6 +54,9 @@ public class SignInUserImpl implements SignInUserService {
                 //将信息存入map中返回前端app
                 Map<String, Object> map = new HashMap<>();
                 map.put("user", signInUser);
+                if (userInvitationId==null){
+                    map.put("userInvitation", "");
+                }
                 map.put("userInvitation", userInvitationId.getUserInvitationCode());
                 String userJson = JSONObject.toJSONString(map);
                 //将数据库信息存入redis当中,并设置三十分钟过期时间

@@ -54,7 +54,6 @@ public class SignInUserController {
 
     /**
      * 登陆接口
-     *
      * @param phone     电话号码
      * @param phoneCode 验证码
      * @return 返回用户信息
@@ -62,6 +61,6 @@ public class SignInUserController {
     @RequestMapping("/login")
     @ResponseBody
     public Result<Map<String, Object>> Login(@RequestParam("phone") String phone, @RequestParam("phoneCode") String phoneCode) {
-        return signInUserService.getUserId(phone, phoneCode);
+        return signInUserService.getUser(phone, phoneCode);
     }
 }

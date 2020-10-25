@@ -13,9 +13,11 @@
         <result column="user_zhifubao_name" property="userZhiFUBaoName"/>
         <result column="user_weixin" property="userWeiXin"/>
         <result column="user_weixin_name" property="userWeiXinName"/>
-<!--        <collection resultMap="UserResultMap"/>-->
+        <result column="user_partner_id" property="userPartnerId"/>
         <association property="signInVip" resultMap="VipResultMap"/>
     </resultMap>
+
+
     <resultMap id="VipResultMap" type="com.sign_in.code.entity.SignInVip">
         <id column="vip_id" property="vipId"/>
         <result column="vip_name" property="vipName"/>
@@ -33,6 +35,7 @@
         user_zhifubao,
         user_zhifubao_name,
         user_weixin,
+        user_partner_id,
         user_weixin_name
     </sql>
 

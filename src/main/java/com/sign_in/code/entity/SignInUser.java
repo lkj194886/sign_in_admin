@@ -32,6 +32,15 @@ public class SignInUser {
     //用户微信姓名
     private String userWeiXinName;
     private SignInVip signInVip;
+    private Long userPartnerId;
+
+    public Long getUserPartnerId() {
+        return userPartnerId;
+    }
+
+    public void setUserPartnerId(Long userPartnerId) {
+        this.userPartnerId = userPartnerId;
+    }
 
     @Override
     public String toString() {
@@ -48,6 +57,7 @@ public class SignInUser {
                 ", userWeiXin='" + userWeiXin + '\'' +
                 ", userWeiXinName='" + userWeiXinName + '\'' +
                 ", signInVip=" + signInVip +
+                ", userPartnerId=" + userPartnerId +
                 '}';
     }
 

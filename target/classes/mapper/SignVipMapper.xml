@@ -1,0 +1,57 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sign_in.code.mapper.SignVipMapper">
+
+    <resultMap id="VipResultMap" type="com.sign_in.code.entity.SignInVip">
+        <id column="vip_id" property="vipId"/>
+        <result column="vip_name" property="vipName"/>
+        <result column="vip_exchange_rate" property="vipExchangeRate"/>
+    </resultMap>
+
+    <sql id="Base_Vip_list">
+        vip_id,
+        vip_name,
+        vip_exchange_rate
+    </sql>
+
+
+    <insert id="addVip" >
+        INSERT sign_in_vip ( `vip_name`, `vip_exchange_rate` )
+        VALUES
+	    (
+            <if test="vipName != null and vipName !='' ">
+                #{vipName},
+            </if>
+            <if test="vipExchangeRate != null and vipExchangeRate != '' ">
+                #{vipExchangeRate}
+            </if>
+	    )
+    </insert>
+
+    <update id="modifyVip">
+        UPDATE sign_in_vip
+        <trim prefix="set" suffixOverrides=",">
+            <if test="vipName != null and vipName !='' ">
+                vip_name = #{vipName},
+            </if>
+            <if test="vipExchangeRate != null and vipExchangeRate != '' ">
+                vip_exchange_rate = #{vipExchangeRate},
+            </if>
+        </trim>
+        WHERE vip_id=#{vipId}
+    </update>
+
+
+    <delete id="removeVip">
+        DELETE
+        FROM sign_in_vip
+        WHERE vip_id =#{vipID}
+    </delete>
+
+    <select id="getVipList" resultMap="VipResultMap">
+        SELECT
+        <include refid="Base_Vip_list"/>
+        FROM sign_in_vip
+    </select>
+</mapper>

@@ -1,0 +1,14 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sign_in.code.mapper.SignInMapper">
+    <resultMap id="SignInResultMap" type="com.sign_in.code.entity.SignTable">
+        <id column="sign_in_id" property="signInId"/>
+        <result column="sign_in_days_count" property="signInDaysCount"/>
+        <result column="sign_in_date" property="signInDate"/>
+        <result column="sign_in_user_id" property="signInUserId"/>
+    </resultMap>
+    <sql id="Base_Sign_List">
+        sign_in_id,sign_in_days_count,sign_in_date,sign_in_user_id
+    </sql>
+</mapper>

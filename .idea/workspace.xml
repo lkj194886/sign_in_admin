@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c01dc49-adcb-46c8-b359-1a6d4209e8d2" name="Default Changelist" comment="commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignInUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignInUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/sign_in_admin.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-    </list>
+    <list default="true" id="1c01dc49-adcb-46c8-b359-1a6d4209e8d2" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,7 +116,7 @@
       <workItem from="1602912536484" duration="59296000" />
       <workItem from="1603507660678" duration="13123000" />
       <workItem from="1603628840667" duration="196000" />
-      <workItem from="1603629089578" duration="4450000" />
+      <workItem from="1603629089578" duration="4808000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1602349026907</created>
@@ -187,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603611630525</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="commit">
+      <created>1603636326843</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1603636326843</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,11 +220,15 @@
     </state>
     <state x="-1209" y="30" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603562572731" />
     <state x="711" y="55" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1601978750385" />
-    <state x="546" y="46" key="CommitChangelistDialog2" timestamp="1603612136228">
-      <screen x="0" y="34" width="1920" height="1046" />
+    <state x="-1374" y="42" key="CommitChangelistDialog2" timestamp="1603636671366">
+      <screen x="-1920" y="30" width="1920" height="1050" />
     </state>
-    <state x="-1374" y="42" key="CommitChangelistDialog2/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603458254220" />
+    <state x="-1374" y="42" key="CommitChangelistDialog2/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603636671366" />
     <state x="546" y="46" key="CommitChangelistDialog2/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1603612136228" />
+    <state x="-1712" y="149" width="1566" height="812" key="DiffContextDialog" timestamp="1603636817079">
+      <screen x="-1920" y="30" width="1920" height="1050" />
+    </state>
+    <state x="-1712" y="149" width="1566" height="812" key="DiffContextDialog/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603636817079" />
     <state x="770" y="304" key="FileChooserDialogImpl" timestamp="1602500535768">
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
@@ -268,6 +273,14 @@
     </state>
     <state width="1706" height="600" key="GridCell.Tab.1.right/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603631581823" />
     <state width="1706" height="303" key="GridCell.Tab.1.right/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1603629685073" />
+    <state x="-1705" y="119" key="MergeDialog" timestamp="1603636633165">
+      <screen x="-1920" y="30" width="1920" height="1050" />
+    </state>
+    <state x="-1705" y="119" key="MergeDialog/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603636633165" />
+    <state x="-1229" y="261" key="MultipleFileMergeDialog" timestamp="1603636633188">
+      <screen x="-1920" y="30" width="1920" height="1050" />
+    </state>
+    <state x="-1229" y="261" key="MultipleFileMergeDialog/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603636633188" />
     <state x="736" y="167" key="RollbackChangesDialog" timestamp="1602349409331">
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
@@ -276,10 +289,10 @@
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
     <state x="491" y="191" key="SettingsEditor/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602348785567" />
-    <state x="540" y="256" key="Vcs.Push.Dialog.v2" timestamp="1603611633288">
-      <screen x="0" y="34" width="1920" height="1046" />
+    <state x="-1380" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603636330976">
+      <screen x="-1920" y="30" width="1920" height="1050" />
     </state>
-    <state x="-1380" y="253" key="Vcs.Push.Dialog.v2/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603458264972" />
+    <state x="-1380" y="253" key="Vcs.Push.Dialog.v2/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603636330976" />
     <state x="540" y="256" key="Vcs.Push.Dialog.v2/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1603611633288" />
     <state x="770" y="384" key="git4idea.rebase.GitRebaseDialog" timestamp="1602349260890">
       <screen x="0" y="34" width="1920" height="1046" />

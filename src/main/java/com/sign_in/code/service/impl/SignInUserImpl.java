@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -66,5 +67,34 @@ public class SignInUserImpl implements SignInUserService {
             return new Result<>(500, "验证码错误", null);
         }
 
+    }
+
+
+    /**
+     * 查询邀请人id
+     * @param phone
+     * @return
+     */
+    @Override
+    public long getUserInvitationId(String phone) {
+        return userMapper.getUserInvitationId(phone);
+    }
+
+
+    /**
+     * 邀请进度
+     * @param invitationCodePhone
+     * @return
+     */
+    @Override
+    public Result<Map<String, Object>> getInvitationProgress(String invitationCodePhone) {
+        long invitationId = getUserInvitationId(invitationCodePhone);
+        Map<String,Object> maps = new HashMap<>();
+        List<SignInUser> invitationProgress = userMapper.getInvitationProgress(invitationId);
+        maps.put("invitationList",invitationProgress);
+        if (invitationProgress != null){
+            return new Result<>(200, "处理成功", maps);
+        }
+        return new Result<>(500, "错误请求", null);
     }
 }

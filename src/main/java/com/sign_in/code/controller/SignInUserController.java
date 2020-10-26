@@ -63,4 +63,10 @@ public class SignInUserController {
     public Result<Map<String, Object>> Login(@RequestParam("phone") String phone, @RequestParam("phoneCode") String phoneCode) {
         return signInUserService.getUser(phone, phoneCode);
     }
+
+    @RequestMapping("/getInvitationP")
+    @ResponseBody
+    public Result<Map<String, Object>> getInvitationProgress(@RequestParam("invitationCodePhone") String invitationCodePhone){
+        return signInUserService.getInvitationProgress(invitationCodePhone);
+    }
 }

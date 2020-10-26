@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -60,5 +61,21 @@ public class SignInVipController {
     @RequestMapping("/removeVip")
     Result<Map<String,Object>> removeVip(@RequestParam("vipId") Long vipId){
         return  signVipService.removeVip(vipId);
+    }
+
+
+    /**
+     * 加入合伙人
+     * @param userId    用户id
+     * @param userParentId  是否加入会员1/0
+     * @return
+     */
+    @RequestMapping("/joinAPartner")
+    Result<Map<String,Object>> joinAPartner(@RequestParam("userId") Long userId,
+                                            @RequestParam("userPartnerId") Long userPartnerId){
+        Map<String,Object> joinMap = new HashMap();
+        joinMap.put("userId",userId);
+        joinMap.put("userPartnerId",userPartnerId);
+        return signVipService.joinAPartner(joinMap);
     }
 }

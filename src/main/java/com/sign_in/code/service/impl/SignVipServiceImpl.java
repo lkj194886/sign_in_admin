@@ -71,4 +71,14 @@ public class SignVipServiceImpl implements SignVipService {
         }
         return new Result<>(500, "处理失败", null);
     }
+
+
+    @Override
+    public Result<Map<String, Object>> joinAPartner(Map<String,Object> mapJoin) {
+        int change = signVipMapper.joinAPartner(mapJoin);
+        if (change > 0){
+            return new Result<>(200, "处理成功", null);
+        }
+        return new Result<>(500, "处理失败", null);
+    }
 }

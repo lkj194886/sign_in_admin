@@ -21,4 +21,6 @@ public interface SignVipService {
     Result<Map<String,Object>> addVip(SignInVip signInVip);
     //删除会员
     Result<Map<String,Object>> removeVip(Long vipId);
+    //加入合伙人
+    Result<Map<String,Object>> joinAPartner(Map<String,Object> mapJoin);
 }

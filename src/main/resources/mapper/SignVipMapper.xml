@@ -54,4 +54,14 @@
         <include refid="Base_Vip_list"/>
         FROM sign_in_vip
     </select>
+    
+    <update id="joinAPartner" parameterType="map">
+        update sign_in_user
+        <set>
+            <if test="userPartnerId != null">
+                user_Partner_id = #{userPartnerId}
+            </if>
+        </set>
+        where user_id = #{userId}
+    </update>
 </mapper>

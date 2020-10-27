@@ -5,6 +5,7 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @Classname SignVipMapper
@@ -21,4 +22,6 @@ public interface SignVipMapper {
     int addVip(SignInVip signInVip);
     //删除会员
     int removeVip(@PathVariable("vipID") Long vipID);
+    //加入合伙人
+    int joinAPartner(Map<String,Object> mapJoin);
 }

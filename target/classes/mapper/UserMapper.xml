@@ -87,5 +87,22 @@
         su.user_id = #{userInvitationId}
     </select>
 
+    <select id="getInvitationProgress" resultMap="UserResultMap" parameterType="long">
+        select  u.user_invitation_id,v.vip_name,u.user_invitation_code
+        from sign_in_user as u
+        INNER JOIN  sign_in_vip as v  ON  v.vip_id = u.user_vip_id
+        where u.user_invitation_id = #{invitationCodeId}
+    </select>
+
+
+    <select id="getUserInvitationId" resultType="long" parameterType="string">
+        SELECT
+          user_id
+        FROM
+          sign_in_user
+        WHERE
+          user_name = #{phone}
+    </select>
+
 
 </mapper>

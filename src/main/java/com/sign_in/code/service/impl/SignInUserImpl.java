@@ -28,14 +28,10 @@ public class SignInUserImpl implements SignInUserService {
     @Autowired
     RedisUtil redisUtil;
 
-//    @Override
-//    public SignInUser getUser(String phone) {
-//        //获取用户信息
-//        return userMapper.getUser(phone);
-//    }
 
     /**
      * 登陆接口
+     *
      * @param phone     电话号码
      * @param phoneCode 验证码
      * @return 返回用户信息
@@ -72,6 +68,7 @@ public class SignInUserImpl implements SignInUserService {
 
     /**
      * 查询邀请人id
+     *
      * @param phone
      * @return
      */
@@ -83,18 +80,50 @@ public class SignInUserImpl implements SignInUserService {
 
     /**
      * 邀请进度
+     *
      * @param invitationCodePhone
      * @return
      */
     @Override
     public Result<Map<String, Object>> getInvitationProgress(String invitationCodePhone) {
         long invitationId = getUserInvitationId(invitationCodePhone);
-        Map<String,Object> maps = new HashMap<>();
+        Map<String, Object> maps = new HashMap<>();
         List<SignInUser> invitationProgress = userMapper.getInvitationProgress(invitationId);
-        maps.put("invitationList",invitationProgress);
-        if (invitationProgress != null){
+        maps.put("invitationList", invitationProgress);
+        if (invitationProgress != null) {
             return new Result<>(200, "处理成功", maps);
         }
         return new Result<>(500, "错误请求", null);
+    }
+
+    @Override
+    public Result<Map<String, Object>> boundWeiXin(Long uid, String weiXin, String weiXinName) {
+        //判断参数是否为空
+        if ((weiXin != null && weiXin!="") && (weiXinName != null&&weiXinName!="")) {
+            //不为空调用方法
+            int bound = userMapper.boundWeiXin(uid, weiXin, weiXinName);
+            //判断数据库是否修改成功
+            if (bound > 0) {
+                return new Result<>(200, "处理成功", null);
+            }
+        } else {
+            //为空返回错误
+            return new Result<>(500, "微信账号和姓名不能为空", null);
+        }
+        //错误返回
+        return new Result<>(500, "处理失败,\n请联系管理员!", null);
+    }
+
+    @Override
+    public Result<Map<String, Object>> boundZhiFuBao(Long uid, String zhiFUBao, String zhiFUBaoName) {
+        if ((zhiFUBao != null&& zhiFUBao!="") && (zhiFUBaoName != null&&zhiFUBaoName!="")) {
+            int bound = userMapper.boundWeiXin(uid, zhiFUBao, zhiFUBaoName);
+            if (bound > 0) {
+                return new Result<>(200, "处理成功", null);
+            }
+        } else {
+            return new Result<>(500, "支付宝账号和姓名不能为空", null);
+        }
+        return new Result<>(500, "处理失败,\n请联系管理员!", null);
     }
 }

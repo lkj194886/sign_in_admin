@@ -15,12 +15,17 @@ import java.util.Map;
  * @Created by wgg
  */
 public interface SignInUserService {
-//    //登陆
-//    SignInUser getUser(String phone);
+
     //根据ID查询用户
     Result<Map<String,Object>> getUser(String phone, String phoneCode);
     //邀请人的id
     long getUserInvitationId(String phone);
     //邀请进度
     Result<Map<String,Object>> getInvitationProgress(String invitationCodePhone);
+
+    //绑定微信
+    Result<Map<String,Object>> boundWeiXin(Long uid, String weiXin,String weiXinName);
+
+    //绑定支付宝
+    Result<Map<String,Object>> boundZhiFuBao(Long uid, String zhiFUBao,String zhiFUBaoName);
 }

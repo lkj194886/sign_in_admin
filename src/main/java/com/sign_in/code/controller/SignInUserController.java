@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -25,7 +26,7 @@ import java.util.Map;
  * @Created by wgg
  */
 @RequestMapping("/user")
-@Controller
+@RestController
 public class SignInUserController {
 
     @Autowired
@@ -44,7 +45,6 @@ public class SignInUserController {
      * @return 返回处理成功信息
      */
     @RequestMapping("/getPhoneCode")
-    @ResponseBody
     public Result<Map<String, Object>> getPhoneCode(@RequestParam("phone") String phone) {
         int code = aliYunUtil.aliYunCode(phone);
         //获取验证码后存入redis中,设置五分钟的过期时间
@@ -54,19 +54,44 @@ public class SignInUserController {
 
     /**
      * 登陆接口
+     *
      * @param phone     电话号码
      * @param phoneCode 验证码
      * @return 返回用户信息
      */
     @RequestMapping("/login")
-    @ResponseBody
     public Result<Map<String, Object>> Login(@RequestParam("phone") String phone, @RequestParam("phoneCode") String phoneCode) {
         return signInUserService.getUser(phone, phoneCode);
     }
 
     @RequestMapping("/getInvitationP")
-    @ResponseBody
-    public Result<Map<String, Object>> getInvitationProgress(@RequestParam("invitationCodePhone") String invitationCodePhone){
+    public Result<Map<String, Object>> getInvitationProgress(@RequestParam("invitationCodePhone") String invitationCodePhone) {
         return signInUserService.getInvitationProgress(invitationCodePhone);
+    }
+
+    /**
+     * 绑定微信
+     *
+     * @param uid          用户ID
+     * @param weiXinNumber 用户微信号
+     * @param weiXinName   用户微信姓名
+     * @return
+     */
+    @RequestMapping("/boundWeixin")
+    public Result<Map<String, Object>> boundWeixin(@RequestParam("uid") Long uid, @RequestParam("weiXinNumber") String weiXinNumber, @RequestParam("weiXinName") String weiXinName) {
+        return signInUserService.boundWeiXin(uid, weiXinNumber, weiXinName);
+    }
+
+    /**
+     * 绑定支付宝
+     *
+     * @param uid            用户id
+     * @param zhiFuBaoNumber 用户支付宝账号
+     * @param zhiFuBaoName   支付宝姓名
+     * @return
+     */
+    @RequestMapping("/boundZhiFuBao")
+    public Result<Map<String, Object>> boundZhiFuBao(@RequestParam("uid") Long uid,@RequestParam("zhiFuBaoNumber") String zhiFuBaoNumber, @RequestParam("zhiFuBaoName")String zhiFuBaoName) {
+        return signInUserService.boundZhiFuBao(uid, zhiFuBaoNumber, zhiFuBaoName);
     }
 }

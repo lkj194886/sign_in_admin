@@ -22,4 +22,10 @@ public interface UserMapper {
     long getUserInvitationId(@Param("phone") String phone);
     //邀请进度
     List<SignInUser> getInvitationProgress(@Param("invitationCodeId")long invitationCodeId);
+
+    //绑定微信账号
+    int boundWeiXin(@Param("uid") Long uid,@Param("userWeiXin") String userWeiXin,@Param("userWeiXinName") String userWeiXinName);
+
+    //绑定支付宝账号
+    int boundZhiFuBao(@Param("uid") Long uid,@Param("userZhiFUBao") String userZhiFUBao,@Param("userZhiFUBaoName") String userZhiFUBaoName);
 }

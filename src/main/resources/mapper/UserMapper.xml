@@ -66,6 +66,33 @@
 	#{userInvitationCode})
     </insert>
 
+    <update id="boundWeiXin">
+
+    UPDATE sign_in_user
+    <trim prefix="set" suffixOverrides=",">
+        <if test="userWeiXin != null and userWeiXin != '' ">
+            user_weixin = #{userWeiXin},
+        </if>
+        <if test="userWeiXinName != null and userWeiXinName != '' ">
+            user_weixin_name = #{userWeiXinName},
+        </if>
+    </trim>
+    WHERE user_id = #{uid}
+    </update>
+
+    <update id="boundZhiFuBao">
+        UPDATE sign_in_user
+        <trim prefix="set" suffixOverrides=",">
+            <if test="userZhiFUBao != null and userZhiFUBao != '' ">
+                user_zhifubao = #{userZhiFUBao},
+            </if>
+            <if test="userZhiFUBaoName != null and userZhiFUBaoName != '' ">
+                user_zhifubao_name = #{userZhiFUBaoName},
+            </if>
+        </trim>
+        WHERE user_id = #{uid}
+    </update>
+
     <select id="getUser" resultMap="UserResultMap">
         SELECT
 	       <include refid="Base_Column_List"/>,

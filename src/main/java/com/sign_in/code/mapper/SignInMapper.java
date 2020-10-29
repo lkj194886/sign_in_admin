@@ -7,5 +7,7 @@ package com.sign_in.code.mapper;
  * @Created by wgg
  */
 public interface SignInMapper {
+    //未签到过(添加新的签到)
 
+    //签到
 }

@@ -64,6 +64,11 @@ public class SignInUserController {
         return signInUserService.getUser(phone, phoneCode);
     }
 
+    /**
+     * 邀请进度
+     * @param invitationCodePhone 用户手机号
+     * @return 进度List
+     */
     @RequestMapping("/getInvitationP")
     public Result<Map<String, Object>> getInvitationProgress(@RequestParam("invitationCodePhone") String invitationCodePhone) {
         return signInUserService.getInvitationProgress(invitationCodePhone);

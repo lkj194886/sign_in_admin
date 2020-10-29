@@ -96,6 +96,14 @@ public class SignInUserImpl implements SignInUserService {
         return new Result<>(500, "错误请求", null);
     }
 
+    /**
+     * 绑定微信
+     *
+     * @param uid          用户ID
+     * @param weiXinNumber 用户微信号
+     * @param weiXinName   用户微信姓名
+     * @return
+     */
     @Override
     public Result<Map<String, Object>> boundWeiXin(Long uid, String weiXin, String weiXinName) {
         //判断参数是否为空
@@ -113,7 +121,14 @@ public class SignInUserImpl implements SignInUserService {
         //错误返回
         return new Result<>(500, "处理失败,\n请联系管理员!", null);
     }
-
+    /**
+     * 绑定支付宝
+     *
+     * @param uid            用户id
+     * @param zhiFuBaoNumber 用户支付宝账号
+     * @param zhiFuBaoName   支付宝姓名
+     * @return
+     */
     @Override
     public Result<Map<String, Object>> boundZhiFuBao(Long uid, String zhiFUBao, String zhiFUBaoName) {
         if ((zhiFUBao != null&& zhiFUBao!="") && (zhiFUBaoName != null&&zhiFUBaoName!="")) {

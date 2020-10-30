@@ -4,16 +4,15 @@ import com.sign_in.code.entity.SignInUser;
 import com.sign_in.code.mapper.SignVipMapper;
 import com.sign_in.code.mapper.UserMapper;
 import com.sign_in.code.service.impl.SignInUserImpl;
+import com.sign_in.code.util.DateUtil;
 import com.sign_in.code.util.Md5Util;
 import com.sign_in.code.util.Result;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 
 @SpringBootTest
@@ -25,17 +24,11 @@ class SignInApplicationTests {
     SignVipMapper signVipMapper;
     @Autowired
     SignInUserImpl signInUser;
-
+    @Autowired
+    DateUtil dateUtil;
     @Test
     void contextLoads() {
-//        for (int i = 0; i < 100; i++) {
-            int flag = new Random().nextInt(9999);
-            if (flag<1000){
-                flag += 1000;
-            }
-            System.out.println(flag);
-//        }
-
+        System.out.println("new Date() = " + new Date());
     }
 
     @Test

@@ -11,4 +11,36 @@
     <sql id="Base_Sign_List">
         sign_in_id,sign_in_days_count,sign_in_date,sign_in_user_id
     </sql>
+    <insert id="newSingIn">
+        INSERT INTO `sign_in_table`
+        (
+        `sign_in_days_count`,
+        `sign_in_date`,
+        `sign_in_user_id`
+        )
+        VALUES(
+        #{signInDaysCount},
+        #{signInDate},
+        #{signInUserId}
+        )
+    </insert>
+    <update id="signIn">
+        UPDATE sign_in_table
+        <trim prefix="set" suffixOverrides=",">
+        <if test="signInDaysCount != null and signInDaysCount != ''">
+            sign_in_days_count=#{signInDaysCount},
+        </if>
+        <if test="signInDate != null ">
+            sign_in_date=#{signInDate},
+        </if>
+        </trim>
+        WHERE sign_in_user_id=#{signInUserId}
+    </update>
+
+    <select id="getSignIn" resultMap="SignInResultMap">
+        SELECT
+        <include refid="Base_Sign_List"/>
+        FROM sign_in_table
+        WHERE sign_in_user_id =#{uid}
+    </select>
 </mapper>

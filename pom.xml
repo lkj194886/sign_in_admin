@@ -53,6 +53,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.49</version>
         </dependency>
         <!-- 阿里巴巴druid数据库连接池 -->
         <dependency>

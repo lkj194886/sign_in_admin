@@ -1,5 +1,8 @@
 package com.sign_in.code.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 /**
@@ -14,6 +17,8 @@ public class SignTable {
     //签到天数
     private Long signInDaysCount;
     //签到时间
+    @JsonFormat(timezone = "GMT+8",pattern = "yyyy-MM-dd")
+    @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date signInDate;
     //签到人ID
     private Long signInUserId;

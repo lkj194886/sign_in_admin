@@ -1,0 +1,17 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sign_in.code.mapper.SignInConfigMapper">
+    <resultMap id="SignInConfigMap" type="com.sign_in.code.entity.SignInConfig">
+        <id column="config_id" property="configId"/>
+        <result column="config_sign_in_props" property="configSignInProps"/>
+    </resultMap>
+    <sql id="SignInConfig_SQL">
+        `config_id`,`config_sign_in_props`
+    </sql>
+    <select id="getSignInConfig" resultMap="SignInConfigMap">
+        SELECT
+        <include refid="SignInConfig_SQL"/>
+        FROM sign_in_config
+    </select>
+</mapper>

@@ -92,6 +92,19 @@
         </trim>
         WHERE user_id = #{uid}
     </update>
+    <update id="cumulativeProps">
+        UPDATE
+        sign_in_user
+        <trim prefix="set"  suffixOverrides=",">
+            <if test="qiBi != null">
+                user_qibi = #{qiBi},
+            </if>
+        </trim>
+        WHERE user_id=#{uid}
+    </update>
+    <update id="qiBiWithdrawal">
+
+    </update>
 
     <select id="getUser" resultMap="UserResultMap">
         SELECT

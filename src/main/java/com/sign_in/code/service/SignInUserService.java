@@ -1,10 +1,11 @@
 package com.sign_in.code.service;
 
-import com.sign_in.code.entity.SignInUser;
-import com.sign_in.code.util.Result;
-import org.apache.ibatis.annotations.Param;
 
-import java.util.List;
+import com.sign_in.code.util.Result;
+
+
+import java.math.BigDecimal;
+
 import java.util.Map;
 
 
@@ -16,7 +17,7 @@ import java.util.Map;
  */
 public interface SignInUserService {
 
-    //根据ID查询用户
+    //登陆
     Result<Map<String,Object>> getUser(String phone, String phoneCode);
     //邀请人的id
     long getUserInvitationId(String phone);
@@ -28,4 +29,6 @@ public interface SignInUserService {
 
     //绑定支付宝
     Result<Map<String,Object>> boundZhiFuBao(Long uid, String zhiFUBao,String zhiFUBaoName);
+    //签到道具累加
+    int cumulativeProps( Long uid, BigDecimal qiBi);
 }

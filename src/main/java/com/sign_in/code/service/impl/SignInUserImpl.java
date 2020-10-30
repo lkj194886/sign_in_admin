@@ -9,6 +9,7 @@ import com.sign_in.code.util.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -140,5 +141,14 @@ public class SignInUserImpl implements SignInUserService {
             return new Result<>(500, "支付宝账号和姓名不能为空", null);
         }
         return new Result<>(500, "处理失败,\n请联系管理员!", null);
+    }
+
+    @Override
+    public int cumulativeProps(Long uid, BigDecimal qiBi) {
+        SignInUser signInUser = new SignInUser();
+        signInUser =  userMapper.getUserId(uid);
+        BigDecimal qiBiCount = signInUser.getUserQiBi();
+        qiBiCount = qiBiCount.add(qiBi);
+        return userMapper.cumulativeProps(uid,qiBiCount);
     }
 }

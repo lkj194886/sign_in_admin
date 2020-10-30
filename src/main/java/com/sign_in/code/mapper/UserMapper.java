@@ -3,6 +3,7 @@ package com.sign_in.code.mapper;
 import com.sign_in.code.entity.SignInUser;
 import org.apache.ibatis.annotations.Param;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -28,4 +29,10 @@ public interface UserMapper {
 
     //绑定支付宝账号
     int boundZhiFuBao(@Param("uid") Long uid,@Param("userZhiFUBao") String userZhiFUBao,@Param("userZhiFUBaoName") String userZhiFUBaoName);
+
+    //签到道具累加
+    int cumulativeProps(@Param("uid") Long uid, @Param("qiBi") BigDecimal qiBi);
+
+    //七币提现到余额
+    int qiBiWithdrawal(@Param("uid") Long uid,@Param("qiBi") BigDecimal qiBi);
 }

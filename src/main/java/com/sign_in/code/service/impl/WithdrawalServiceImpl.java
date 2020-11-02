@@ -39,8 +39,12 @@ public class WithdrawalServiceImpl implements WithdrawalService {
     @Override
     public Result<Map<String, Object>> balanceWithdrawal(Long uid, BigDecimal balance) {
         SignInUser signInUser = userMapper.getUserId(uid);
+        //查询数据库是否存在该用户
         if (signInUser != null) {
+            //查询该用户是否有登录
             if (redisUtil.get(signInUser.getUserName()) != null) {
+                //重新设置过期时间
+                redisUtil.expric(signInUser.getUserName(),1800);
                 if (balance != null) {
                     //判断余额是否充足
                     if (signInUser.getUserRemainingSum().compareTo(balance) == -1) {

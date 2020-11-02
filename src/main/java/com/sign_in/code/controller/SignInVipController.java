@@ -58,8 +58,8 @@ public class SignInVipController {
      * @param vipId 会员ID
      * @return
      */
-    @RequestMapping("/removeVip")
-    Result<Map<String,Object>> removeVip(@RequestParam("vipId") Long vipId){
+    @RequestMapping("/removeVip/{vipId}")
+    Result<Map<String,Object>> removeVip(@PathVariable("vipId") Long vipId){
         return  signVipService.removeVip(vipId);
     }
 

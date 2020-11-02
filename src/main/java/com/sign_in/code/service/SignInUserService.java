@@ -29,6 +29,10 @@ public interface SignInUserService {
 
     //绑定支付宝
     Result<Map<String,Object>> boundZhiFuBao(Long uid, String zhiFUBao,String zhiFUBaoName);
+
     //签到道具累加
     int cumulativeProps( Long uid, BigDecimal qiBi);
+
+    //七币提现到余额
+    Result<Map<String,Object>> qiBiWithdrawal(String userPhone, BigDecimal qiBi);
 }

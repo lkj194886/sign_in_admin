@@ -103,8 +103,27 @@
         WHERE user_id=#{uid}
     </update>
     <update id="qiBiWithdrawal">
-
+    UPDATE sign_in_user
+    <trim prefix="set" suffixOverrides=",">
+        <if test="balance != null">
+            user_remaining_sum = #{balance},
+        </if>
+        <if test="qiBi != null ">
+            user_qibi = #{qiBi},
+        </if>
+    </trim>
+      WHERE user_name = #{userPhone}
     </update>
+    <update id="balanceWithdrawal">
+        UPDATE sign_in_user
+        <trim prefix="set" suffixOverrides=",">
+            <if test="balance != null">
+                user_remaining_sum = #{balance},
+            </if>
+        </trim>
+        WHERE user_id=#{uid}
+    </update>
+
 
     <select id="getUser" resultMap="UserResultMap">
         SELECT

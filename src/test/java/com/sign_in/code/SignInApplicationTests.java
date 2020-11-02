@@ -3,6 +3,7 @@ package com.sign_in.code;
 import com.sign_in.code.entity.SignInUser;
 import com.sign_in.code.mapper.SignVipMapper;
 import com.sign_in.code.mapper.UserMapper;
+import com.sign_in.code.service.SignInUserService;
 import com.sign_in.code.service.impl.SignInUserImpl;
 import com.sign_in.code.util.DateUtil;
 import com.sign_in.code.util.Md5Util;
@@ -11,6 +12,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -26,9 +28,12 @@ class SignInApplicationTests {
     SignInUserImpl signInUser;
     @Autowired
     DateUtil dateUtil;
+
+    @Autowired
+    SignInUserService signInUserService;
     @Test
     void contextLoads() {
-        System.out.println("new Date() = " + new Date());
+        signInUserService.qiBiWithdrawal("15695958932", BigDecimal.valueOf(5));
     }
 
     @Test

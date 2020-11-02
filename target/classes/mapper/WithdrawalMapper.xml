@@ -16,6 +16,16 @@
         withdrawal_user_id,
         withdrawal_status
     </sql>
+    <insert id="balanceWithdrawal">
+        INSERT INTO sign_in_withdrawal ( `withdrawal_sum`, `withdrawal_date`, `withdrawal_user_id`, `withdrawal_status` )
+        VALUES
+	    (
+		    #{balance},
+		    NOW(),
+	        #{uid},
+	        #{status}
+	    )
+    </insert>
 
 
 </mapper>

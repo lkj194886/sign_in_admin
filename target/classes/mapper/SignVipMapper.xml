@@ -54,7 +54,13 @@
         <include refid="Base_Vip_list"/>
         FROM sign_in_vip
     </select>
-    
+
+    <select id="getExchangeRate" resultType="java.lang.Double">
+        SELECT vip_exchange_rate
+        FROM sign_in_vip
+        WHERE vip_id = #{vid};
+    </select>
+
     <update id="joinAPartner" parameterType="map">
         update sign_in_user
         <set>

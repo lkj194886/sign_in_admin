@@ -7,6 +7,15 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
+    hikari:
+      minimum-idle: 5
+      idle-timeout: 180000
+      maximum-pool-size: 10
+      auto-commit: true
+      pool-name: sign_in_db
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-init-sql: SELECT 1
   redis:
     database: 0
     host: localhost

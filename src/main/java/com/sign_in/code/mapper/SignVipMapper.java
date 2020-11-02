@@ -21,7 +21,9 @@ public interface SignVipMapper {
     //添加新的会员信息
     int addVip(SignInVip signInVip);
     //删除会员
-    int removeVip(@PathVariable("vipID") Long vipID);
+    int removeVip(@Param("vipID") Long vipID);
     //加入合伙人
     int joinAPartner(Map<String,Object> mapJoin);
+    //根据vipID查询七币提现兑换率
+    Double getExchangeRate(@Param("vid") Long vid);
 }

@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -98,5 +99,16 @@ public class SignInUserController {
     @RequestMapping("/boundZhiFuBao")
     public Result<Map<String, Object>> boundZhiFuBao(@RequestParam("uid") Long uid,@RequestParam("zhiFuBaoNumber") String zhiFuBaoNumber, @RequestParam("zhiFuBaoName")String zhiFuBaoName) {
         return signInUserService.boundZhiFuBao(uid, zhiFuBaoNumber, zhiFuBaoName);
+    }
+
+    /**
+     * 七币提现到余额
+     * @param userPhone 用户手机号
+     * @param qiBi 用户所要提现七币数额
+     * @return
+     */
+    @RequestMapping("/qiBiWithdrawal")
+    public Result<Map<String,Object>> qiBiWithdrawal(@RequestParam("userPhone") String userPhone,@RequestParam("qiBi") BigDecimal qiBi){
+        return signInUserService.qiBiWithdrawal(userPhone,qiBi);
     }
 }

@@ -2,6 +2,7 @@ package com.sign_in.code.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
 import com.sign_in.code.entity.SignInUser;
+import com.sign_in.code.mapper.SignVipMapper;
 import com.sign_in.code.mapper.UserMapper;
 import com.sign_in.code.service.SignInUserService;
 import com.sign_in.code.util.RedisUtil;
@@ -29,7 +30,8 @@ public class SignInUserImpl implements SignInUserService {
     @Autowired
     RedisUtil redisUtil;
 
-
+    @Autowired
+    SignVipMapper signVipMapper;
     /**
      * 登陆接口
      *
@@ -143,6 +145,12 @@ public class SignInUserImpl implements SignInUserService {
         return new Result<>(500, "处理失败,\n请联系管理员!", null);
     }
 
+    /**
+     * 签到道具累加
+     * @param uid 用户ID
+     * @param qiBi 增加的道具数量
+     * @return
+     */
     @Override
     public int cumulativeProps(Long uid, BigDecimal qiBi) {
         SignInUser signInUser = new SignInUser();
@@ -150,5 +158,36 @@ public class SignInUserImpl implements SignInUserService {
         BigDecimal qiBiCount = signInUser.getUserQiBi();
         qiBiCount = qiBiCount.add(qiBi);
         return userMapper.cumulativeProps(uid,qiBiCount);
+    }
+
+    /**
+     * 七币兑换
+     * @param userPhone 用户手机号
+     * @param qiBi 兑换数量
+     * @return
+     */
+    @Override
+    public Result<Map<String,Object>> qiBiWithdrawal(String userPhone, BigDecimal qiBi) {
+        if (redisUtil.get(userPhone)!=null) {
+            SignInUser signInUser = userMapper.getUser(userPhone);
+            if (signInUser.getUserQiBi().compareTo(qiBi)==-1){
+                return new Result<>(500,"七币不足",null);
+            }
+            //获取七币兑换率
+            Double vipChangeRate = signVipMapper.getExchangeRate(signInUser.getUserVipId()) / 100;
+            //兑换所得金额
+            BigDecimal  balance = qiBi.subtract(qiBi.multiply(BigDecimal.valueOf(vipChangeRate)));
+            //将兑换所得与账户余额相加
+            balance = signInUser.getUserRemainingSum().add(balance);
+            //减少用户户七币
+            qiBi = signInUser.getUserQiBi().subtract(qiBi);
+            if (userMapper.qiBiWithdrawal(userPhone,balance,qiBi)>0){
+                return new Result<>(400,"处理成功",null);
+            }
+        }
+        else {
+            return new Result<>(401, "登陆已过期,\n请重新登陆!", null);
+        }
+        return new Result<>(500,"处理失败,\n请联系管理员",null);
     }
 }

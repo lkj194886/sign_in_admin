@@ -11,16 +11,23 @@ import java.util.Map;
 
 /**
  * @Classname SignInTableController
- * @Description TODO
+ * @Description TODO 签到
  * @Date 2020/10/19 14:11
  * @Created by wgg
  */
 @RequestMapping("/sign")
 @RestController
 public class SignInTableController {
+
+
     @Autowired
     SignInService signInService;
 
+    /**
+     * 签到
+     * @param uid 用户id
+     * @return
+     */
     @RequestMapping("/signIn")
     public Result<Map<String, Object>> signIn(@RequestParam("uid") Long uid) {
         return signInService.sign(uid);

@@ -2,8 +2,60 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c01dc49-adcb-46c8-b359-1a6d4209e8d2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/AdvertisingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInConfigController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignInAdvErTiSing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/AdvertisingMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/service/AdvertisingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/service/UserAdminService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/service/impl/AdvertisingServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/service/impl/UserAdminServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/AdvertisingMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/sign_in/code/controller/AdvertisingController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/sign_in/code/controller/SignInConfigController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/sign_in/code/entity/SignInAdvErTiSing.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/sign_in/code/mapper/AdvertisingMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/sign_in/code/service/AdvertisingService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/sign_in/code/service/UserAdminService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/sign_in/code/service/impl/AdvertisingServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/sign_in/code/service/impl/UserAdminServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/AdvertisingMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/service/impl/WithdrawalServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/service/impl/WithdrawalServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/config/FilePathConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/config/FilePathConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInUserAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInUserAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignInConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/entity/SignInConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/SignInConfigMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/SignInConfigMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/SignVipMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/SignVipMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/UserAdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/mapper/UserAdminMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/service/SignInConfigService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/service/SignInConfigService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/service/SignInUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/service/SignInUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/service/SignVipService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/service/SignVipService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/service/impl/SignInConfigServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/service/impl/SignInConfigServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/service/impl/SignInUserImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/service/impl/SignInUserImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sign_in/code/service/impl/SignVipServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sign_in/code/service/impl/SignVipServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SignInConfigMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SignInConfigMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SignVipMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SignVipMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserAdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserAdminMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sign_in/code/SignInApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sign_in/code/SignInApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sign_in/code/config/FilePathConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sign_in/code/config/FilePathConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sign_in/code/controller/SignInUserAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sign_in/code/controller/SignInUserAdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sign_in/code/entity/SignInConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sign_in/code/entity/SignInConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sign_in/code/mapper/SignInConfigMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sign_in/code/mapper/SignInConfigMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sign_in/code/mapper/SignVipMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sign_in/code/mapper/SignVipMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sign_in/code/mapper/UserAdminMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sign_in/code/mapper/UserAdminMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sign_in/code/service/SignInConfigService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sign_in/code/service/SignInConfigService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sign_in/code/service/SignInUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sign_in/code/service/SignInUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sign_in/code/service/SignVipService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sign_in/code/service/SignVipService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sign_in/code/service/impl/SignInConfigServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sign_in/code/service/impl/SignInConfigServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sign_in/code/service/impl/SignInUserImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sign_in/code/service/impl/SignInUserImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sign_in/code/service/impl/SignVipServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sign_in/code/service/impl/SignVipServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sign_in/code/service/impl/WithdrawalServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sign_in/code/service/impl/WithdrawalServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SignInConfigMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/SignInConfigMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SignVipMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/SignVipMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserAdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/UserAdminMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/sign_in/code/SignInApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/sign_in/code/SignInApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,21 +78,27 @@
     <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInCityController.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/service/impl/SignVipServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/service/impl/SignInServiceImpl.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/main/resources/application.yml" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/service/impl/SignInUserImpl.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/service/impl/WithdrawalServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/mapper/UserAdminMapper.xml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInConfigController.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/mapper/SignInMapper.xml" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/test/java/com/sign_in/code/SignInApplicationTests.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/mapper/SignVipMapper.xml" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/mapper/WithdrawalMapper.xml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/mapper/AdvertisingMapper.xml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/service/impl/AdvertisingServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/AdvertisingController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/mapper/SignInConfigMapper.xml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/service/impl/UserAdminServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/service/impl/SignInConfigServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/service/impl/SignInServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/application.yml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/service/impl/WithdrawalServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInUserController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInUserAdminController.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/service/SignInUserService.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInVipController.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/main/resources/mapper/SignInConfigMapper.xml" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInTableController.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/service/impl/SignInConfigServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/sign_in/code/controller/SignInWithdrawalController.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MavenImportPreferences">
@@ -99,6 +157,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SignInApplicationTests.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sign_in_admin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sign_in.code.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sign_in.code" />
+      <option name="MAIN_CLASS_NAME" value="com.sign_in.code.SignInApplicationTests" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SignInApplicationTests.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sign_in_admin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sign_in.code.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sign_in.code" />
+      <option name="MAIN_CLASS_NAME" value="com.sign_in.code.SignInApplicationTests" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CodeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="sign_in_admin" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sign_in.code.SignInApplication" />
@@ -108,6 +198,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SignInApplicationTests.test1" />
+        <item itemvalue="JUnit.SignInApplicationTests.test2" />
         <item itemvalue="JUnit.SignInApplicationTests.contextLoads" />
       </list>
     </recent_temporary>
@@ -130,7 +222,18 @@
       <workItem from="1603628840667" duration="196000" />
       <workItem from="1603629089578" duration="4808000" />
       <workItem from="1603791903304" duration="55863000" />
-      <workItem from="1604251490964" duration="11896000" />
+      <workItem from="1604251490964" duration="27856000" />
+      <workItem from="1604639645713" duration="7586000" />
+      <workItem from="1604825737440" duration="16310000" />
+      <workItem from="1605110989070" duration="25161000" />
+      <workItem from="1605473215926" duration="1814000" />
+      <workItem from="1605965516857" duration="2945000" />
+      <workItem from="1606112988310" duration="13589000" />
+      <workItem from="1606189250991" duration="613000" />
+      <workItem from="1606196294064" duration="374000" />
+      <workItem from="1606207021559" duration="626000" />
+      <workItem from="1606208864237" duration="1542000" />
+      <workItem from="1606268542219" duration="225000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1602349026907</created>
@@ -258,7 +361,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604297410450</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="commit">
+      <created>1604305778371</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1604305778371</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,77 +401,95 @@
       <screen x="-1920" y="30" width="1920" height="1050" />
     </state>
     <state x="-1383" y="159" key="#All_in_sign_in_admin/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603961270038" />
-    <state x="-1151" y="251" key="#com.intellij.ide.util.MemberChooser" timestamp="1604295535612">
-      <screen x="-1920" y="30" width="1920" height="1050" />
+    <state x="769" y="254" key="#com.intellij.ide.util.MemberChooser" timestamp="1606113850473">
+      <screen x="0" y="34" width="1920" height="1046" />
     </state>
-    <state x="-1151" y="251" key="#com.intellij.ide.util.MemberChooser/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1604295535612" />
+    <state x="-1151" y="251" key="#com.intellij.ide.util.MemberChooser/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1605354208491" />
     <state x="769" y="254" key="#com.intellij.ide.util.MemberChooser/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1603626228277" />
+    <state x="769" y="254" key="#com.intellij.ide.util.MemberChooser/0.34.1920.1046@0.34.1920.1046" timestamp="1606113850473" />
     <state x="-1209" y="30" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603562572731">
       <screen x="-1920" y="30" width="1920" height="1050" />
     </state>
     <state x="-1209" y="30" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603562572731" />
     <state x="711" y="55" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1601978750385" />
-    <state x="-1374" y="42" key="CommitChangelistDialog2" timestamp="1604297403606">
+    <state x="-1374" y="42" key="CommitChangelistDialog2" timestamp="1604305776111">
       <screen x="-1920" y="30" width="1920" height="1050" />
     </state>
-    <state x="-1374" y="42" key="CommitChangelistDialog2/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1604297403606" />
+    <state x="-1374" y="42" key="CommitChangelistDialog2/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1604305776111" />
     <state x="546" y="46" key="CommitChangelistDialog2/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1603827691153" />
     <state x="-1712" y="149" width="1566" height="812" key="DiffContextDialog" timestamp="1603636817079">
       <screen x="-1920" y="30" width="1920" height="1050" />
     </state>
     <state x="-1712" y="149" width="1566" height="812" key="DiffContextDialog/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603636817079" />
-    <state x="770" y="304" key="FileChooserDialogImpl" timestamp="1602500535768">
+    <state x="-1150" y="301" key="FileChooserDialogImpl" timestamp="1605023573481">
+      <screen x="-1920" y="30" width="1920" height="1050" />
+    </state>
+    <state x="-1150" y="301" key="FileChooserDialogImpl/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1605023573481" />
+    <state x="770" y="304" key="FileChooserDialogImpl/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602500535768" />
+    <state width="1877" height="446" key="GridCell.Tab.0.bottom" timestamp="1606130421095">
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
-    <state x="770" y="304" key="FileChooserDialogImpl/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1602500535768" />
-    <state width="1803" height="357" key="GridCell.Tab.0.bottom" timestamp="1604297339388">
-      <screen x="-1920" y="30" width="1920" height="1050" />
-    </state>
     <state width="1876" height="340" key="GridCell.Tab.0.bottom/0.34.1920.1046/-1858.0.1858.1080@-1858.0.1858.1080" timestamp="1604233684723" />
-    <state width="1803" height="357" key="GridCell.Tab.0.bottom/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1604297339388" />
+    <state width="1678" height="406" key="GridCell.Tab.0.bottom/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1605361709851" />
     <state width="1706" height="600" key="GridCell.Tab.0.bottom/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1603828152156" />
-    <state width="1803" height="357" key="GridCell.Tab.0.center" timestamp="1604297339387">
-      <screen x="-1920" y="30" width="1920" height="1050" />
+    <state width="1829" height="423" key="GridCell.Tab.0.bottom/0.34.1920.1046/1920.30.1080.1890@0.34.1920.1046" timestamp="1605966299401" />
+    <state width="1877" height="446" key="GridCell.Tab.0.bottom/0.34.1920.1046@0.34.1920.1046" timestamp="1606130421095" />
+    <state width="1877" height="446" key="GridCell.Tab.0.center" timestamp="1606130421095">
+      <screen x="0" y="34" width="1920" height="1046" />
     </state>
     <state width="1876" height="340" key="GridCell.Tab.0.center/0.34.1920.1046/-1858.0.1858.1080@-1858.0.1858.1080" timestamp="1604233684721" />
-    <state width="1803" height="357" key="GridCell.Tab.0.center/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1604297339387" />
+    <state width="1678" height="406" key="GridCell.Tab.0.center/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1605361709851" />
     <state width="1706" height="600" key="GridCell.Tab.0.center/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1603828152156" />
-    <state width="1803" height="357" key="GridCell.Tab.0.left" timestamp="1604297339387">
-      <screen x="-1920" y="30" width="1920" height="1050" />
+    <state width="1829" height="423" key="GridCell.Tab.0.center/0.34.1920.1046/1920.30.1080.1890@0.34.1920.1046" timestamp="1605966299400" />
+    <state width="1877" height="446" key="GridCell.Tab.0.center/0.34.1920.1046@0.34.1920.1046" timestamp="1606130421095" />
+    <state width="1877" height="446" key="GridCell.Tab.0.left" timestamp="1606130421095">
+      <screen x="0" y="34" width="1920" height="1046" />
     </state>
     <state width="1876" height="340" key="GridCell.Tab.0.left/0.34.1920.1046/-1858.0.1858.1080@-1858.0.1858.1080" timestamp="1604233684720" />
-    <state width="1803" height="357" key="GridCell.Tab.0.left/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1604297339387" />
+    <state width="1678" height="406" key="GridCell.Tab.0.left/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1605361709850" />
     <state width="1706" height="600" key="GridCell.Tab.0.left/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1603828152156" />
-    <state width="1803" height="357" key="GridCell.Tab.0.right" timestamp="1604297339388">
-      <screen x="-1920" y="30" width="1920" height="1050" />
+    <state width="1829" height="423" key="GridCell.Tab.0.left/0.34.1920.1046/1920.30.1080.1890@0.34.1920.1046" timestamp="1605966299399" />
+    <state width="1877" height="446" key="GridCell.Tab.0.left/0.34.1920.1046@0.34.1920.1046" timestamp="1606130421095" />
+    <state width="1877" height="446" key="GridCell.Tab.0.right" timestamp="1606130421095">
+      <screen x="0" y="34" width="1920" height="1046" />
     </state>
     <state width="1876" height="340" key="GridCell.Tab.0.right/0.34.1920.1046/-1858.0.1858.1080@-1858.0.1858.1080" timestamp="1604233684722" />
-    <state width="1803" height="357" key="GridCell.Tab.0.right/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1604297339388" />
+    <state width="1678" height="406" key="GridCell.Tab.0.right/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1605361709851" />
     <state width="1706" height="600" key="GridCell.Tab.0.right/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1603828152156" />
-    <state width="1803" height="357" key="GridCell.Tab.1.bottom" timestamp="1604297339388">
-      <screen x="-1920" y="30" width="1920" height="1050" />
+    <state width="1829" height="423" key="GridCell.Tab.0.right/0.34.1920.1046/1920.30.1080.1890@0.34.1920.1046" timestamp="1605966299400" />
+    <state width="1877" height="446" key="GridCell.Tab.0.right/0.34.1920.1046@0.34.1920.1046" timestamp="1606130421095" />
+    <state width="1877" height="446" key="GridCell.Tab.1.bottom" timestamp="1606130421096">
+      <screen x="0" y="34" width="1920" height="1046" />
     </state>
     <state width="1671" height="340" key="GridCell.Tab.1.bottom/0.34.1920.1046/-1858.0.1858.1080@-1858.0.1858.1080" timestamp="1604233684691" />
-    <state width="1803" height="357" key="GridCell.Tab.1.bottom/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1604297339388" />
+    <state width="1678" height="406" key="GridCell.Tab.1.bottom/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1605361709852" />
     <state width="1706" height="600" key="GridCell.Tab.1.bottom/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1603828152157" />
-    <state width="1803" height="357" key="GridCell.Tab.1.center" timestamp="1604297339388">
-      <screen x="-1920" y="30" width="1920" height="1050" />
+    <state width="1829" height="423" key="GridCell.Tab.1.bottom/0.34.1920.1046/1920.30.1080.1890@0.34.1920.1046" timestamp="1605966299401" />
+    <state width="1877" height="446" key="GridCell.Tab.1.bottom/0.34.1920.1046@0.34.1920.1046" timestamp="1606130421096" />
+    <state width="1877" height="446" key="GridCell.Tab.1.center" timestamp="1606130421096">
+      <screen x="0" y="34" width="1920" height="1046" />
     </state>
     <state width="1671" height="340" key="GridCell.Tab.1.center/0.34.1920.1046/-1858.0.1858.1080@-1858.0.1858.1080" timestamp="1604233684691" />
-    <state width="1803" height="357" key="GridCell.Tab.1.center/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1604297339388" />
+    <state width="1678" height="406" key="GridCell.Tab.1.center/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1605361709852" />
     <state width="1706" height="600" key="GridCell.Tab.1.center/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1603828152156" />
-    <state width="1803" height="357" key="GridCell.Tab.1.left" timestamp="1604297339388">
-      <screen x="-1920" y="30" width="1920" height="1050" />
+    <state width="1829" height="423" key="GridCell.Tab.1.center/0.34.1920.1046/1920.30.1080.1890@0.34.1920.1046" timestamp="1605966299401" />
+    <state width="1877" height="446" key="GridCell.Tab.1.center/0.34.1920.1046@0.34.1920.1046" timestamp="1606130421096" />
+    <state width="1877" height="446" key="GridCell.Tab.1.left" timestamp="1606130421095">
+      <screen x="0" y="34" width="1920" height="1046" />
     </state>
     <state width="1671" height="340" key="GridCell.Tab.1.left/0.34.1920.1046/-1858.0.1858.1080@-1858.0.1858.1080" timestamp="1604233684690" />
-    <state width="1803" height="357" key="GridCell.Tab.1.left/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1604297339388" />
+    <state width="1678" height="406" key="GridCell.Tab.1.left/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1605361709851" />
     <state width="1706" height="600" key="GridCell.Tab.1.left/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1603828152156" />
-    <state width="1803" height="357" key="GridCell.Tab.1.right" timestamp="1604297339388">
-      <screen x="-1920" y="30" width="1920" height="1050" />
+    <state width="1829" height="423" key="GridCell.Tab.1.left/0.34.1920.1046/1920.30.1080.1890@0.34.1920.1046" timestamp="1605966299401" />
+    <state width="1877" height="446" key="GridCell.Tab.1.left/0.34.1920.1046@0.34.1920.1046" timestamp="1606130421095" />
+    <state width="1877" height="446" key="GridCell.Tab.1.right" timestamp="1606130421096">
+      <screen x="0" y="34" width="1920" height="1046" />
     </state>
     <state width="1671" height="340" key="GridCell.Tab.1.right/0.34.1920.1046/-1858.0.1858.1080@-1858.0.1858.1080" timestamp="1604233684691" />
-    <state width="1803" height="357" key="GridCell.Tab.1.right/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1604297339388" />
+    <state width="1678" height="406" key="GridCell.Tab.1.right/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1605361709852" />
     <state width="1706" height="600" key="GridCell.Tab.1.right/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1603828152156" />
+    <state width="1829" height="423" key="GridCell.Tab.1.right/0.34.1920.1046/1920.30.1080.1890@0.34.1920.1046" timestamp="1605966299401" />
+    <state width="1877" height="446" key="GridCell.Tab.1.right/0.34.1920.1046@0.34.1920.1046" timestamp="1606130421096" />
     <state x="215" y="123" key="MergeDialog" timestamp="1603827838695">
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
@@ -380,10 +508,10 @@
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
     <state x="491" y="191" key="SettingsEditor/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1603827610518" />
-    <state x="-1380" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604297413346">
+    <state x="-1380" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604306414792">
       <screen x="-1920" y="30" width="1920" height="1050" />
     </state>
-    <state x="-1380" y="253" key="Vcs.Push.Dialog.v2/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1604297413346" />
+    <state x="-1380" y="253" key="Vcs.Push.Dialog.v2/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1604306414792" />
     <state x="540" y="256" key="Vcs.Push.Dialog.v2/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1603827698768" />
     <state x="-1264" y="328" key="git4idea.merge.GitPullDialog" timestamp="1604297443957">
       <screen x="-1920" y="30" width="1920" height="1050" />
@@ -403,10 +531,10 @@
       <screen x="-1920" y="30" width="1920" height="1050" />
     </state>
     <state x="-1257" y="163" key="refactoring.ChangeSignatureDialog/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1604253832424" />
-    <state x="-1316" y="254" width="672" height="681" key="search.everywhere.popup" timestamp="1603961911495">
+    <state x="-1316" y="254" width="672" height="681" key="search.everywhere.popup" timestamp="1604325964762">
       <screen x="-1920" y="30" width="1920" height="1050" />
     </state>
-    <state x="-1316" y="254" width="672" height="681" key="search.everywhere.popup/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1603961911495" />
+    <state x="-1316" y="254" width="672" height="681" key="search.everywhere.popup/0.34.1920.1046/-1920.30.1920.1050@-1920.30.1920.1050" timestamp="1604325964762" />
     <state x="604" y="257" width="672" height="678" key="search.everywhere.popup/0.34.1920.1046/-1920.30.1920.1050@0.34.1920.1046" timestamp="1603011672934" />
     <state x="778" y="332" key="svn.repositoryBrowser" timestamp="1602349621331">
       <screen x="0" y="34" width="1920" height="1046" />

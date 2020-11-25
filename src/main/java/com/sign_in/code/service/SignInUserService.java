@@ -4,6 +4,7 @@ package com.sign_in.code.service;
 import com.sign_in.code.util.Result;
 
 
+import java.io.IOException;
 import java.math.BigDecimal;
 
 import java.util.Map;
@@ -35,4 +36,6 @@ public interface SignInUserService {
 
     //七币提现到余额
     Result<Map<String,Object>> qiBiWithdrawal(String userPhone, BigDecimal qiBi);
+    //获取邀请图片
+    Result<Map<String,Object>> getInvitationImg(String code) throws IOException;
 }

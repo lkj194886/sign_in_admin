@@ -10,8 +10,19 @@
     <sql id="Base_UserAdmin_List">
         user_admin_id,user_admin_name,user_admin_pwd
     </sql>
+    <insert id="addAdmin">
+        INSERT INTO sign_in_user_admin
+        (`user_admin_name`,`user_admin_pwd`)
+        VALUES(
+        #{name},
+        #{pwd}
+        )
+    </insert>
     <select id="getUserAdmin" resultMap="UserAdminResultMap">
-
+      SELECT
+      <include refid="Base_UserAdmin_List"/>
+      FROM sign_in_user_admin
+      WHERE user_admin_name=#{name}
     </select>
 
 </mapper>

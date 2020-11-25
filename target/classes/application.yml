@@ -38,7 +38,7 @@ pagehelper:
   params: count=countSql
 file:
   path: file/**    #文件访问路径
-  address:  D://wallpaper/  #文件保存路径
+  address:  D://wallpaper/ #文件保存路径
 
 
 #redis

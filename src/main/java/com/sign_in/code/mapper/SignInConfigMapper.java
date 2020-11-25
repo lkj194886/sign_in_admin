@@ -10,4 +10,6 @@ import com.sign_in.code.entity.SignInConfig;
  */
 public interface SignInConfigMapper {
     SignInConfig getSignInConfig();
+    //获取公告以及邀请页背景
+    SignInConfig getBackImg();
 }

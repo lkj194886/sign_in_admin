@@ -26,4 +26,6 @@ public interface SignVipMapper {
     int joinAPartner(Map<String,Object> mapJoin);
     //根据vipID查询七币提现兑换率
     Double getExchangeRate(@Param("vid") Long vid);
+    //修改七币兑换率
+    int modifyChangeRate(@Param("vid") Long vid,@Param("changeRate") Double changeRate);
 }

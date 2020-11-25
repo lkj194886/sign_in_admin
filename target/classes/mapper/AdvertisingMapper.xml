@@ -1,0 +1,22 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sign_in.code.mapper.AdvertisingMapper">
+    <resultMap id="advertisingMap" type="com.sign_in.code.entity.SignInAdvErTiSing">
+        <id column="advertising_id" property="advertisingId"/>
+        <result column="advertising_src" property="advertisingSrc"/>
+        <result column="advertising_status" property="advertisingStatus"/>
+    </resultMap>
+    <sql id="advertising_List">
+        advertising_id,advertising_src,advertising_status
+    </sql>
+    <select id="getAdvertising" resultMap="advertisingMap">
+        SELECT
+        <include refid="advertising_List"/>
+        FROM sign_in_advertising
+        WHERE advertising_status = 1
+        ORDER BY rand() LIMIT 1
+    </select>
+
+
+</mapper>

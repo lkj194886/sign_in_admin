@@ -23,4 +23,6 @@ public interface SignVipService {
     Result<Map<String,Object>> removeVip(Long vipId);
     //加入合伙人
     Result<Map<String,Object>> joinAPartner(Map<String,Object> mapJoin);
+    //修改会员七币兑换率
+    Result<Map<String,Object>> modifyChangeRate(Long vid,Double changeRate);
 }

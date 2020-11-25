@@ -16,10 +16,10 @@ public class FilePathConfig implements WebMvcConfigurer {
 
 
     @Value("${file.path}")
-    private String path;
+    public String path;
 
     @Value("${file.address}")
-    private String address;
+    public String address;
 
     public static final String BannerURL="http://localhost:8081/file/";
 

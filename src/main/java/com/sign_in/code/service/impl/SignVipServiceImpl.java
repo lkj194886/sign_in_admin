@@ -81,4 +81,12 @@ public class SignVipServiceImpl implements SignVipService {
         }
         return new Result<>(500, "处理失败", null);
     }
+
+    @Override
+    public Result<Map<String, Object>> modifyChangeRate(Long vid, Double changeRate) {
+        if (signVipMapper.modifyChangeRate(vid,changeRate)>0){
+            return new Result<>(200,"处理成功",null);
+        }
+        return new Result<>(500, "处理失败", null);
+    }
 }

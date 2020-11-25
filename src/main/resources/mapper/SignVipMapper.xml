@@ -70,4 +70,13 @@
         </set>
         where user_id = #{userId}
     </update>
+    <update id="modifyChangeRate">
+       UPDATE sign_in_vip
+       <trim prefix="set" suffixOverrides=",">
+           <if test="changeRate != null">
+               vip_exchange_rate = #{changeRate},
+           </if>
+       </trim>
+       WHERE vip_id = 1
+    </update>
 </mapper>

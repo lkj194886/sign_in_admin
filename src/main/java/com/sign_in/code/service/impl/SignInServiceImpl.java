@@ -1,9 +1,12 @@
 package com.sign_in.code.service.impl;
 
 import com.sign_in.code.config.RedisConfig;
+import com.sign_in.code.entity.SignInActive;
 import com.sign_in.code.entity.SignInConfig;
 import com.sign_in.code.entity.SignInUser;
 import com.sign_in.code.entity.SignTable;
+import com.sign_in.code.mapper.SignInActiveMapper;
+import com.sign_in.code.mapper.SignInConfigMapper;
 import com.sign_in.code.mapper.SignInMapper;
 import com.sign_in.code.mapper.UserMapper;
 import com.sign_in.code.service.SignInConfigService;
@@ -38,6 +41,8 @@ public class SignInServiceImpl implements SignInService {
     SignInMapper signInMapper;
 
     @Autowired
+    SignInActiveMapper signInActiveMapper;
+    @Autowired
     DateUtil dateUtil;
 
     @Autowired
@@ -50,7 +55,8 @@ public class SignInServiceImpl implements SignInService {
     UserMapper userMapper;
     @Autowired
     RedisUtil redisUtil;
-
+    @Autowired
+    SignInConfigMapper signInConfigMapper;
     @Override
     public Result<Map<String, Object>> sign(Long uid) {
         try {
@@ -66,6 +72,7 @@ public class SignInServiceImpl implements SignInService {
             Timestamp datenew = Timestamp.valueOf(simpleDate.format(newdate));
             //七币数量
             Double qiBi = signInConfig.getConfigSignInProps();
+
             //查询是否有签到记录
             if (signTable != null) {
                 //获取签到时间
@@ -89,8 +96,13 @@ public class SignInServiceImpl implements SignInService {
                         //签到中断,重新累加签到天数
                         SignTable signTable1 = signTable(uid, datenew, 1l);
                         if (signInMapper.signIn(signTable1) > 0) {
+
                             if (signInUserService.cumulativeProps(uid, BigDecimal.valueOf(signTable1.getSignInDaysCount() * qiBi)) > 0) {
-                                return new Result<>(200, "处理成功", null);
+                                if (signInActive(BigDecimal.valueOf(signTable1.getSignInDaysCount() * qiBi), uid, "签到", signInUser.getUserInvitationId())) {
+                                    return new Result<>(200, "处理成功", getUserContent(uid));
+                                } else {
+                                    return new Result<>(500, "处理失败", null);
+                                }
                             }
                         }
                     } else {
@@ -99,16 +111,26 @@ public class SignInServiceImpl implements SignInService {
 
                             if (signInMapper.signIn(signTable(uid, datenew, 1l)) > 0) {
                                 //用户道具累加
-                                if (signInUserService.cumulativeProps(uid, BigDecimal.valueOf(signTable.getSignInDaysCount() * qiBi)) > 0) {
-                                    return new Result<>(200, "处理成功", null);
+                                SignTable signTable1 = signTable(uid, datenew, 1l);
+                                if (signInUserService.cumulativeProps(uid, BigDecimal.valueOf(signTable1.getSignInDaysCount())) > 0) {
+                                    if (signInActive(BigDecimal.valueOf(signTable.getSignInDaysCount() * qiBi), uid, "签到", signInUser.getUserInvitationId())) {
+                                        return new Result<>(200, "处理成功", getUserContent(uid));
+                                    } else {
+                                        return new Result<>(500, "处理失败", null);
+                                    }
                                 }
                             }
                         } else {
                             //签到信息累加
                             if (signInMapper.signIn(signTable(uid, datenew, signTable.getSignInDaysCount() + 1)) > 0) {
                                 //用户道具累加
-                                if (signInUserService.cumulativeProps(uid, BigDecimal.valueOf((signTable.getSignInDaysCount() + 1) * qiBi)) > 0) {
-                                    return new Result<>(200, "处理成功", null);
+                                SignTable signTable1 = signTable(uid, datenew, signTable.getSignInDaysCount() + 1);
+                                if (signInUserService.cumulativeProps(uid, BigDecimal.valueOf(signTable1.getSignInDaysCount())) > 0) {
+                                    if (signInActive(BigDecimal.valueOf(signTable.getSignInDaysCount() * qiBi), uid, "签到", signInUser.getUserInvitationId())) {
+                                        return new Result<>(200, "处理成功", getUserContent(uid));
+                                    } else {
+                                        return new Result<>(500, "处理失败", null);
+                                    }
                                 }
                             }
                         }
@@ -122,7 +144,11 @@ public class SignInServiceImpl implements SignInService {
                 if (signInMapper.newSingIn(signTable1) > 0) {
                     //增加道具
                     if (signInUserService.cumulativeProps(uid, BigDecimal.valueOf(signTable1.getSignInDaysCount() * qiBi)) > 0) {
-                        return new Result<>(200, "处理成功", null);
+                        if (signInActive(BigDecimal.valueOf(signTable1.getSignInDaysCount() * qiBi), uid, "签到", signInUser.getUserInvitationId())) {
+                            return new Result<>(200, "处理成功", getUserContent(uid));
+                        } else {
+                            return new Result<>(500, "处理失败", null);
+                        }
                     }
                 }
             }
@@ -134,6 +160,34 @@ public class SignInServiceImpl implements SignInService {
     }
 
 
+    public Map<String, Object> getUserContent(Long uid) {
+
+        SignInUser signInUser = new SignInUser();
+        Map<String, Object> map = new HashMap<>();
+        signInUser = userMapper.getUserId(uid);
+        map.put("user", signInUser);
+        SignInUser userInvitationId = userMapper.getUserId(signInUser.getUserInvitationId());
+//        System.out.println("userInvitationId = " + userInvitationId);
+        if (userInvitationId!=null) {
+            map.put("userInvitation", userInvitationId.getUserInvitationCode());
+        }
+        SignTable signTable = signInMapper.getSignIn(signInUser.getUserId());
+        String indexBack = "";
+        if (signTable.getSignInDaysCount() == 0 || signTable==null) {
+            indexBack = signInConfigMapper.getIndexBackImg(1l);
+        } else {
+            indexBack = signInConfigMapper.getIndexBackImg(signTable.getSignInDaysCount());
+        }
+        Double withdrawalRate = signInConfigMapper.getWithdrawalRate();
+        Double videoRate = signInConfigMapper.getSignInConfig().getVideoRate();
+        map.put("withdrawalRate",withdrawalRate);
+        map.put("videoRate",videoRate);
+        map.put("indexBack", indexBack);
+        map.put("videCount",signInConfigMapper.getSignInConfig().getConfigVideoCount());
+        map.put("signExist", false);
+        return map;
+    }
+
     //创建签到对象
     public static SignTable signTable(Long uid, Date date, Long count) {
         SignTable signTable = new SignTable();
@@ -141,5 +195,47 @@ public class SignInServiceImpl implements SignInService {
         signTable.setSignInDaysCount(count);
         signTable.setSignInDate(date);
         return signTable;
+    }
+
+    //签到完成判断上级是否是合伙人,如果是则添加活跃奖励如果不是则不添加
+
+    /**
+     * @param sum        活跃奖励
+     * @param juniorUid  下级ID
+     * @param activeType 活跃奖励类型
+     * @param superiorId 上级ID
+     * @return
+     */
+    public boolean signInActive(BigDecimal sum, Long juniorUid, String activeType, Long superiorId) {
+        SignInConfig signInConfig = signInConfigService.getSignInConfig();
+        Double active_sign_in = signInConfig.getConfigActiveSignIn();
+        SignInUser signInUser = userMapper.getUserId(superiorId);
+        BigDecimal newSum = new BigDecimal(active_sign_in);
+        BigDecimal nnsum = sum.multiply(newSum);
+//        System.out.println("上级获取签到的百分之 = " + active_sign_in);
+//        System.out.println("当前用户签到获取的道具数量 = " + sum);
+//        System.out.println("newSum = " + newSum);
+//        System.out.println("合伙人添加的道具数量 = " + nnsum);
+        if (signInUser != null) {
+            if (signInUser.getUserPartnerId() == 1) {
+                SignInActive signInActive = new SignInActive();
+                signInActive.setActiveSum(nnsum);
+                signInActive.setActiveUserId(superiorId);
+                signInActive.setActiveJuniorUserId(juniorUid);
+                signInActive.setActiveType(activeType);
+                if (signInActiveMapper.addActive(signInActive) > 0) {
+                    if (signInUserService.cumulativeProps(superiorId, nnsum) > 0) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                } else {
+                    return false;
+                }
+            }
+        }
+
+
+        return true;
     }
 }

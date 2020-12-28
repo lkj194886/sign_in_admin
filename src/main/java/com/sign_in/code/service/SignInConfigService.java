@@ -14,4 +14,8 @@ import java.util.Map;
 public interface SignInConfigService {
     SignInConfig getSignInConfig();
     Result<Map<String,Object>> getBackImg();
+    Result<Map<String,Object>> getAdminConfig();
+    Result<Map<String,Object>> getIndexBack(Integer pageNum);
+    int modifyConfig(SignInConfig signInConfig);
+    Result<Map<String,Object>> modifyIndexBack(Long cid ,String indexBack);
 }

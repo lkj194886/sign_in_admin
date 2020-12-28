@@ -39,8 +39,9 @@ public class ReadJsonUtil {
     }
 
     public static String getCityCode(String city){
-        String path = ReadJsonUtil.class.getClassLoader().getResource("sojson_com_city.json").getPath();
-//        System.out.println("path = " + path);
+//        String path = "/home/wallpaper/sojson_com_city.json";
+        String path = "D://wallpaper/sojson_com_city.json";
+        System.out.println("path = " + path);
         String s = ReadJsonUtil.readJsonFile(path);
         JSONArray jsonArray = JSON.parseArray(s);
 

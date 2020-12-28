@@ -1,6 +1,11 @@
 package com.sign_in.code.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.sign_in.code.entity.vo.ActiveVo;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * @Classname SignInUser
@@ -33,14 +38,11 @@ public class SignInUser {
     private String userWeiXinName;
     private SignInVip signInVip;
     private Long userPartnerId;
-
-    public Long getUserPartnerId() {
-        return userPartnerId;
-    }
-
-    public void setUserPartnerId(Long userPartnerId) {
-        this.userPartnerId = userPartnerId;
-    }
+    private ActiveVo activeVo;
+    //注册时间
+    @JsonFormat(timezone = "GMT+8",pattern = "yyyy-MM-dd")
+    @DateTimeFormat(pattern="yyyy-MM-dd")
+    private Date userTime;
 
     @Override
     public String toString() {
@@ -58,52 +60,10 @@ public class SignInUser {
                 ", userWeiXinName='" + userWeiXinName + '\'' +
                 ", signInVip=" + signInVip +
                 ", userPartnerId=" + userPartnerId +
+                ", activeVo=" + activeVo +
+                ", userTime=" + userTime +
                 '}';
     }
-
-    public SignInUser(){
-
-    }
-    public String getUserZhiFUBao() {
-        return userZhiFUBao;
-    }
-
-    public void setUserZhiFUBao(String userZhiFUBao) {
-        this.userZhiFUBao = userZhiFUBao;
-    }
-
-    public String getUserZhiFUBaoName() {
-        return userZhiFUBaoName;
-    }
-
-    public void setUserZhiFUBaoName(String userZhiFUBaoName) {
-        this.userZhiFUBaoName = userZhiFUBaoName;
-    }
-
-    public String getUserWeiXin() {
-        return userWeiXin;
-    }
-
-    public void setUserWeiXin(String userWeiXin) {
-        this.userWeiXin = userWeiXin;
-    }
-
-    public String getUserWeiXinName() {
-        return userWeiXinName;
-    }
-
-    public void setUserWeiXinName(String userWeiXinName) {
-        this.userWeiXinName = userWeiXinName;
-    }
-
-    public SignInVip getSignInVip() {
-        return signInVip;
-    }
-
-    public void setSignInVip(SignInVip signInVip) {
-        this.signInVip = signInVip;
-    }
-
 
     public Long getUserId() {
         return userId;
@@ -161,5 +121,67 @@ public class SignInUser {
         this.userInvitationCode = userInvitationCode;
     }
 
+    public String getUserZhiFUBao() {
+        return userZhiFUBao;
+    }
 
+    public void setUserZhiFUBao(String userZhiFUBao) {
+        this.userZhiFUBao = userZhiFUBao;
+    }
+
+    public String getUserZhiFUBaoName() {
+        return userZhiFUBaoName;
+    }
+
+    public void setUserZhiFUBaoName(String userZhiFUBaoName) {
+        this.userZhiFUBaoName = userZhiFUBaoName;
+    }
+
+    public String getUserWeiXin() {
+        return userWeiXin;
+    }
+
+    public void setUserWeiXin(String userWeiXin) {
+        this.userWeiXin = userWeiXin;
+    }
+
+    public String getUserWeiXinName() {
+        return userWeiXinName;
+    }
+
+    public void setUserWeiXinName(String userWeiXinName) {
+        this.userWeiXinName = userWeiXinName;
+    }
+
+    public SignInVip getSignInVip() {
+        return signInVip;
+    }
+
+    public void setSignInVip(SignInVip signInVip) {
+        this.signInVip = signInVip;
+    }
+
+    public Long getUserPartnerId() {
+        return userPartnerId;
+    }
+
+    public void setUserPartnerId(Long userPartnerId) {
+        this.userPartnerId = userPartnerId;
+    }
+
+    public ActiveVo getActiveVo() {
+        return activeVo;
+    }
+
+    public void setActiveVo(ActiveVo activeVo) {
+        this.activeVo = activeVo;
+    }
+
+    public Date getUserTime() {
+        return userTime;
+    }
+
+    public void setUserTime(Date userTime) {
+        this.userTime = userTime;
+    }
 }

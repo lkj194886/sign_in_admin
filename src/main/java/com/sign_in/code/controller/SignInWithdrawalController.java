@@ -30,7 +30,25 @@ public class SignInWithdrawalController {
      * @return
      */
     @RequestMapping("/balanceWithdrawal")
-    Result<Map<String,Object>> balanceWithdrawal(@RequestParam("uid") Long uid, @RequestParam("balance") BigDecimal balance){
-        return withdrawalService.balanceWithdrawal(uid,balance);
+    Result<Map<String,Object>> balanceWithdrawal(@RequestParam("uid") Long uid, @RequestParam("balance") BigDecimal balance,@RequestParam("account_type") String account_type){
+        return withdrawalService.balanceWithdrawal(uid,balance,account_type);
+    }
+
+    //查询提现数据
+    @RequestMapping("/getWthdrawalList")
+    Result<Map<String,Object>> getWthdrawalList(@RequestParam("uid") Long uid ){
+        return withdrawalService.getWithdrawalList(uid);
+    }
+
+    //获取提现集合
+    @RequestMapping("/getListAll")
+    Result<Map<String,Object>> getListAll(@RequestParam("uid") Long uid,@RequestParam(defaultValue = "1", value = "pageNum") Integer pageNum){
+        return withdrawalService.getListAll(uid, pageNum);
+    }
+
+    //更改提现状态
+    @RequestMapping("/modifyWithdrawal")
+    Result<Map<String,Object>> modifyWithdrawal(@RequestParam("wid") Long wid,@RequestParam("status")String status){
+        return withdrawalService.modifyWithdrawal(wid, status);
     }
 }

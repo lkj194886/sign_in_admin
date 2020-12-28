@@ -10,6 +10,13 @@
         <result column="config_sign_in_noticeBackImg" property="noticeBackImg"/>
         <result column="config_sign_in_download" property="download"/>
         <result column="config_sign_in_invitation" property="invitation"/>
+        <result column="config_sign_in_download_url" property="download_url"/>
+        <result column="config_active_sign_in" property="configActiveSignIn"/>
+        <result column="config_active_welfare" property="configActiveWelfare"/>
+        <result column="config_withdrawal_rate" property="configWithdrawalRate"/>
+        <result column="config_welfare_qibi" property="videoRate"/>
+        <result column="config_video_count" property="configVideoCount"/>
+        <result column="config_add_video_count" property="configAddVideoCount"/>
     </resultMap>
     <sql id="SignInConfig_SQL">
        config_id,
@@ -18,16 +25,154 @@
         config_sign_in_invitation,
         config_sign_in_indexBackImg,
         config_sign_in_noticeBackImg,
-        config_sign_in_invitation_backImg
+        config_sign_in_invitation_backImg,
+        config_sign_in_download_url,
+        config_active_sign_in,
+        config_active_welfare,
+        config_withdrawal_rate,
+        config_welfare_qibi,
+        config_video_count,
+        config_add_video_count
     </sql>
+    <sql id="adminConfig">
+        config_sign_in_props,
+        config_sign_in_download,
+        config_sign_in_invitation,
+        config_sign_in_noticeBackImg,
+        config_sign_in_invitation_backImg,
+        config_sign_in_download_url,
+        config_active_sign_in,
+        config_active_welfare,
+        config_withdrawal_rate,
+        config_welfare_qibi,
+        config_video_count,
+        config_add_video_count
+    </sql>
+    <sql id="modifyConfig">
+        <trim prefix="set" suffixOverrides=",">
+            <if test="configSignInProps != null">
+                config_sign_in_props=  #{configSignInProps},
+            </if>
+            <if test="download != null and download != '' ">
+                config_sign_in_download= #{download},
+            </if>
+            <if test="invitation != null and invitation !='' ">
+                config_sign_in_invitation= #{invitation},
+            </if>
+            <if test="noticeBackImg != null and noticeBackImg != '' ">
+                config_sign_in_noticeBackImg= #{noticeBackImg},
+            </if>
+            <if test="invitationBackImg != null and invitationBackImg != '' ">
+                config_sign_in_invitation_backImg=  #{invitationBackImg},
+            </if>
+            <if test="download_url != null and download_url !='' ">
+                config_sign_in_download_url=  #{download_url},
+            </if>
+            <if test="configActiveSignIn != null ">
+                config_active_sign_in= #{configActiveSignIn},
+            </if>
+            <if test="configActiveWelfare != null ">
+                config_active_welfare=  #{configActiveWelfare},
+            </if>
+            <if test="configWithdrawalRate != null">
+                config_withdrawal_rate= #{configWithdrawalRate},
+            </if>
+            <if test="videoRate != null">
+                config_welfare_qibi=#{videoRate},
+            </if>
+            <if test="configVideoCount != null ">
+                config_video_count= #{configVideoCount},
+            </if>
+            <if test="configAddVideoCount !=null ">
+                config_add_video_count=#{configAddVideoCount},
+            </if>
+        </trim>
+    </sql>
+    <update id="modifyConfig">
+        UPDATE
+        sign_in_config
+        <trim prefix="set" suffixOverrides=",">
+            <if test="configSignInProps != null">
+                config_sign_in_props=  #{configSignInProps},
+            </if>
+            <if test="download != null and download != '' ">
+                config_sign_in_download= #{download},
+            </if>
+            <if test="invitation != null and invitation !='' ">
+                config_sign_in_invitation= #{invitation},
+            </if>
+            <if test="noticeBackImg != null and noticeBackImg != '' ">
+                config_sign_in_noticeBackImg= #{noticeBackImg},
+            </if>
+            <if test="invitationBackImg != null and invitationBackImg != '' ">
+                config_sign_in_invitation_backImg=  #{invitationBackImg},
+            </if>
+            <if test="download_url != null and download_url !='' ">
+                config_sign_in_download_url=  #{download_url},
+            </if>
+            <if test="configActiveSignIn != null ">
+                config_active_sign_in= #{configActiveSignIn},
+            </if>
+            <if test="configActiveWelfare != null ">
+                config_active_welfare=  #{configActiveWelfare},
+            </if>
+            <if test="configWithdrawalRate != null">
+                config_withdrawal_rate= #{configWithdrawalRate},
+            </if>
+            <if test="videoRate != null">
+                config_welfare_qibi=#{videoRate},
+            </if>
+            <if test="configVideoCount != null ">
+                config_video_count= #{configVideoCount},
+            </if>
+            <if test="configAddVideoCount !=null ">
+                config_add_video_count=#{configAddVideoCount},
+            </if>
+        </trim>
+        WHERE config_id = 1
+    </update>
+    <update id="modifyIndexBack">
+        update
+        sign_in_config
+        <trim prefix="set" suffixOverrides=",">
+            <if test="indexBack != null and indexBack != '' ">
+                config_sign_in_indexBackImg = #{indexBack},
+            </if>
+        </trim>
+        WHERE config_id = #{cid}
+    </update>
     <select id="getSignInConfig" resultMap="SignInConfigMap">
         SELECT
         <include refid="SignInConfig_SQL"/>
         FROM sign_in_config
+         WHERE config_id =1
     </select>
     <select id="getBackImg" resultMap="SignInConfigMap">
         SELECT config_sign_in_noticeBackImg,config_sign_in_invitation_backImg
-
         FROM  sign_in_config
+        WHERE config_id =1
     </select>
+    <select id="getIndexBackImg" resultType="java.lang.String">
+        SELECT config_sign_in_indexBackImg
+        from sign_in_config
+        WHERE config_id = #{sid}
+    </select>
+    <select id="getWithdrawalRate" resultType="java.lang.Double">
+       SELECT config_withdrawal_rate
+        from sign_in_config
+				WHERE config_id =1
+    </select>
+    <select id="getAdminConfig" resultMap="SignInConfigMap">
+        SELECT
+        <include refid="adminConfig"/>
+        FROM sign_in_config
+        WHERE config_id =1
+    </select>
+    <select id="getIndexBack" resultMap="SignInConfigMap">
+        SELECT
+         config_id,config_sign_in_indexBackImg
+         FROM sign_in_config
+    </select>
+
+
 </mapper>

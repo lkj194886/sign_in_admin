@@ -2,6 +2,8 @@ package com.sign_in.code.service.impl;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.sign_in.code.entity.SignInConfig;
 import com.sign_in.code.mapper.SignInConfigMapper;
 import com.sign_in.code.service.SignInConfigService;
@@ -11,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -51,5 +54,42 @@ public class SignInConfigServiceImpl implements SignInConfigService {
             return new Result<>(200, "处理成功", map);
         }
         return new Result<>(500, "处理失败", null);
+    }
+
+    @Override
+    public Result<Map<String, Object>> getAdminConfig() {
+        SignInConfig config = signInConfigMapper.getAdminConfig();
+        if (config!=null){
+            Map<String,Object> map = new HashMap<>();
+            map.put("config",config);
+            return new Result<>(200,"处理成功",map);
+        }
+        return new Result<>(500,"处理失败",null);
+    }
+
+    @Override
+    public Result<Map<String, Object>> getIndexBack(Integer pageNum) {
+        PageHelper.startPage(pageNum,5);
+        List<SignInConfig> list = signInConfigMapper.getIndexBack();
+        if (list!=null){
+            PageInfo<SignInConfig> pageInfo = new PageInfo<>(list);
+            Map<String,Object> map = new HashMap<>();
+            map.put("pageInfo",pageInfo);
+            return new Result<>(200,"处理成功",map);
+        }
+        return new Result<>(500,"处理失败",null);
+    }
+
+    @Override
+    public int modifyConfig(SignInConfig signInConfig) {
+        return signInConfigMapper.modifyConfig(signInConfig);
+    }
+
+    @Override
+    public Result<Map<String, Object>> modifyIndexBack(Long cid, String indexBack) {
+        if (signInConfigMapper.modifyIndexBack(cid,indexBack)>0){
+            return new Result<>(200,"处理成功",null);
+        }
+        return new Result<>(500,"处理失败",null);
     }
 }

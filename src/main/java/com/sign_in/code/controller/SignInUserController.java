@@ -2,6 +2,7 @@ package com.sign_in.code.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.sign_in.code.entity.SignInUser;
+import com.sign_in.code.mapper.UserMapper;
 import com.sign_in.code.service.SignInUserService;
 import com.sign_in.code.util.AliYunUtil;
 import com.sign_in.code.util.RedisUtil;
@@ -98,6 +99,7 @@ public class SignInUserController {
      */
     @RequestMapping("/boundZhiFuBao")
     public Result<Map<String, Object>> boundZhiFuBao(@RequestParam("uid") Long uid,@RequestParam("zhiFuBaoNumber") String zhiFuBaoNumber, @RequestParam("zhiFuBaoName")String zhiFuBaoName) {
+
         return signInUserService.boundZhiFuBao(uid, zhiFuBaoNumber, zhiFuBaoName);
     }
 
@@ -108,7 +110,50 @@ public class SignInUserController {
      * @return
      */
     @RequestMapping("/qiBiWithdrawal")
-    public Result<Map<String,Object>> qiBiWithdrawal(@RequestParam("userPhone") String userPhone,@RequestParam("qiBi") BigDecimal qiBi){
+    public Result<Map<String,Object>> qiBiWithdrawal(@RequestParam("userPhone") String userPhone,@RequestParam("qiBi") BigDecimal qiBi) throws InterruptedException {
         return signInUserService.qiBiWithdrawal(userPhone,qiBi);
+    }
+
+    @RequestMapping("/addUser")
+    public Result<Map<String,Object>> addUser(@RequestParam("phone") String phone, @RequestParam(required = false,value = "yqmcode") String yqmCode, @RequestParam("phoneCode") String phoneCode){
+        return signInUserService.addUser(phone, yqmCode,phoneCode);
+    }
+
+    @RequestMapping("/getInvitationImg")
+    Result<Map<String,Object>> getInvitationImg(@RequestParam("code") String code) throws IOException{
+        return  signInUserService.getInvitationImg(code);
+    }
+    @RequestMapping("/getVideoCount")
+    Result<Map<String,Object>> getVideoCount(@RequestParam("phone") String phone){
+        return signInUserService.getVideoCount(phone);
+    }
+    @RequestMapping("/addVideoCount")
+    Result<Map<String,Object>> addVideoCount(@RequestParam("phone") String phone){
+        return signInUserService.addVideoCount(phone);
+    }
+
+    @RequestMapping("/lessenVideoCount")
+    Result<Map<String,Object>> lessenVideoCount(@RequestParam("phone") String phone,@RequestParam("videoCount") int videoCount){
+        return signInUserService.lessenVideoCount(phone, videoCount);
+    }
+    @Autowired
+    UserMapper userMapper;
+
+    @RequestMapping("/getSuperior")
+    Result<Map<String,Object>> getSuperior(@RequestParam("uid") Long uid){
+        Map<String,Object> map = new HashMap<>();
+        SignInUser signInUser = userMapper.getUserId(uid);
+        System.out.println("signInUser = " + signInUser.toString());
+        map.put("superior",signInUser);
+        if (signInUser!=null){
+            return new Result<>(200,"处理成功",map);
+        }else {
+            return new Result<>(500,"处理失败",null);
+        }
+    }
+
+    @RequestMapping("/addSum")
+    Result<Map<String,Object>> addSum(@RequestParam("uid") Long uid){
+        return signInUserService.addSum(uid);
     }
 }

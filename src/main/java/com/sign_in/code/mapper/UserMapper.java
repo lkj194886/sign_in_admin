@@ -43,4 +43,16 @@ public interface UserMapper {
     //提现,账户余额修改
     int balanceWithdrawal(@Param("uid") Long uid ,@Param("balance") BigDecimal balance);
 
+    //验证邀请码是否存在
+    String existCode(@Param("invitationCode") String invitationCode);
+
+    Long getUid(@Param("invitationCode")String invitationCode);
+
+
+    //获取用户列表
+    List<SignInUser> getUserList(@Param("userName") String userName);
+
+    //用户修改
+    int UpdateUser( SignInUser signInUser);
+
 }

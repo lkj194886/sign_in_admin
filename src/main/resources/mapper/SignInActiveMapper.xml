@@ -1,0 +1,51 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sign_in.code.mapper.SignInActiveMapper">
+    <resultMap id="activeMap" type="com.sign_in.code.entity.SignInActive">
+        <id column="active_id" property="activeId"/>
+        <result column="active_sum" property="activeSum"/>
+        <result column="active_type" property="activeType"/>
+        <result column="active_user_id" property="activeUserId"/>
+        <result column="active_junior_user_id" property="activeJuniorUserId"/>
+        <result column="active_time" property="activeTime"/>
+        <result column="user_name" property="userName"/>
+    </resultMap>
+
+
+    <resultMap id="activeVo" type="com.sign_in.code.entity.vo.ActiveVo">
+        <id column="active_junior_user_id" property="uid"/>
+        <result column="active_sum" property="activeReward"/>
+    </resultMap>
+    <sql id="active_Sql">
+
+        active_sum,
+        active_type,
+        active_user_id,
+        active_junior_user_id,
+        active_time
+    </sql>
+    <insert id="addActive">
+
+        INSERT INTO sign_in_active
+
+        ( <include refid="active_Sql"/>)
+        VALUES
+        (#{activeSum},#{activeType},#{activeUserId},#{activeJuniorUserId},NOW())
+    </insert>
+    <select id="getActiveList" resultMap="activeMap">
+        SELECT
+        active_id, <include refid="active_Sql"/>,
+        user_name
+        FROM
+        sign_in_active as sa
+        INNER JOIN sign_in_user su ON su.user_id = sa.active_junior_user_id
+        WHERE active_user_id=#{uid}
+    </select>
+    <select id="getActiveReward" resultMap="activeVo">
+        SELECT active_junior_user_id,SUM(active_sum) as active_sum
+        FROM sign_in_active
+        WHERE active_junior_user_id = #{uid}
+    </select>
+
+</mapper>

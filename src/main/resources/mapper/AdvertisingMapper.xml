@@ -6,16 +6,78 @@
         <id column="advertising_id" property="advertisingId"/>
         <result column="advertising_src" property="advertisingSrc"/>
         <result column="advertising_status" property="advertisingStatus"/>
+        <result column="advertising_title" property="advertisingTitle"/>
+        <result column="advertising_content" property="advertisingContent"/>
+        <result column="advertising_href" property="advertisingHref"/>
     </resultMap>
     <sql id="advertising_List">
-        advertising_id,advertising_src,advertising_status
+        advertising_id,advertising_src,advertising_status,advertising_title,advertising_content,advertising_href
     </sql>
+    <sql id="add">
+        <trim suffixOverrides=",">
+            <if test="advertisingSrc != null and advertisingSrc != '' ">
+                #{advertisingSrc},
+            </if>
+            <if test="advertisingStatus != 0 ">
+                #{advertisingStatus},
+            </if>
+            <if test="advertisingTitle != null and advertisingTitle != '' ">
+                #{advertisingTitle},
+            </if>
+            <if test="advertisingContent != null and advertisingContent != '' ">
+                #{advertisingContent},
+            </if>
+            <if test="advertisingHref != null and advertisingHref != '' ">
+                #{advertisingHref},
+            </if>
+        </trim>
+    </sql>
+    <insert id="addAdvErTiSing">
+        INSERT INTO
+        sign_in_advertising
+        (advertising_src,advertising_status,advertising_title,advertising_content,advertising_href)
+        VALUES(
+        <include refid="add"></include>
+        )
+
+
+    </insert>
+    <update id="modifyAdvErTiSing">
+        UPDATE
+        sign_in_advertising
+        <trim prefix="set" suffixOverrides=",">
+            <if test="advertisingSrc != null and advertisingSrc !='' ">
+                advertising_src =#{advertisingSrc},
+            </if>
+            <if test="advertisingStatus !=-1 ">
+                advertising_status =#{advertisingStatus},
+            </if>
+            <if test="advertisingTitle != null and advertisingTitle !='' ">
+                advertising_title =#{advertisingTitle},
+            </if>
+            <if test="advertisingContent != null and advertisingContent !='' ">
+                advertising_content =#{advertisingContent},
+            </if>
+            <if test="advertisingHref != null and advertisingHref !='' ">
+                advertising_href =#{advertisingHref},
+            </if>
+        </trim>
+        WHERE advertising_id=#{advertisingId}
+    </update>
     <select id="getAdvertising" resultMap="advertisingMap">
         SELECT
         <include refid="advertising_List"/>
         FROM sign_in_advertising
         WHERE advertising_status = 1
         ORDER BY rand() LIMIT 1
+    </select>
+    <select id="getAdvertisingList" resultMap="advertisingMap">
+        SELECT
+        <include refid="advertising_List"/>
+        FROM sign_in_advertising
+        <if test="title != null and title != ''">
+            WHERE advertising_title like CONCAT('%',#{title},'%')
+        </if>
     </select>
 
 

@@ -3,6 +3,9 @@ package com.sign_in.code.util;
 import org.springframework.stereotype.Component;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -50,5 +53,18 @@ public class DateUtil {
         map.put("month",month+1);
         map.put("date",date);
         return map;
+    }
+
+    //返回今日剩余多少秒
+    public long getExcess(){
+        Date currentDate=new Date();
+        LocalDateTime midnight = LocalDateTime.ofInstant(currentDate.toInstant(),
+                ZoneId.systemDefault()).plusDays(1).withHour(0).withMinute(0)
+                .withSecond(0).withNano(0);
+        LocalDateTime currentDateTime = LocalDateTime.ofInstant(currentDate.toInstant(),
+                ZoneId.systemDefault());
+        long seconds = ChronoUnit.SECONDS.between(currentDateTime, midnight);
+        System.out.println("seconds = " + seconds);
+        return seconds;
     }
 }

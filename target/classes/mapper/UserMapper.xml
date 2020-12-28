@@ -14,6 +14,7 @@
         <result column="user_weixin" property="userWeiXin"/>
         <result column="user_weixin_name" property="userWeiXinName"/>
         <result column="user_partner_id" property="userPartnerId"/>
+        <result column="user_time" property="userTime"/>
         <association property="signInVip" resultMap="VipResultMap"/>
     </resultMap>
 
@@ -36,7 +37,8 @@
         user_zhifubao_name,
         user_weixin,
         user_partner_id,
-        user_weixin_name
+        user_weixin_name,
+        user_time
     </sql>
 
     <sql id="Base_Vip_List">
@@ -54,7 +56,8 @@
     `user_remaining_sum`,
     `user_qibi`,
     `user_invitation_id`,
-    `user_invitation_code`
+    `user_invitation_code`,
+    `user_time`
     )
     VALUES
 	(
@@ -63,21 +66,22 @@
 	#{userRemainingSum},
 	#{userQiBi},
 	#{userInvitationId},
-	#{userInvitationCode})
+	#{userInvitationCode}
+	,NOW())
     </insert>
 
     <update id="boundWeiXin">
 
-    UPDATE sign_in_user
-    <trim prefix="set" suffixOverrides=",">
-        <if test="userWeiXin != null and userWeiXin != '' ">
-            user_weixin = #{userWeiXin},
-        </if>
-        <if test="userWeiXinName != null and userWeiXinName != '' ">
-            user_weixin_name = #{userWeiXinName},
-        </if>
-    </trim>
-    WHERE user_id = #{uid}
+        UPDATE sign_in_user
+        <trim prefix="set" suffixOverrides=",">
+            <if test="userWeiXin != null and userWeiXin != '' ">
+                user_weixin = #{userWeiXin},
+            </if>
+            <if test="userWeiXinName != null and userWeiXinName != '' ">
+                user_weixin_name = #{userWeiXinName},
+            </if>
+        </trim>
+        WHERE user_id = #{uid}
     </update>
 
     <update id="boundZhiFuBao">
@@ -95,7 +99,7 @@
     <update id="cumulativeProps">
         UPDATE
         sign_in_user
-        <trim prefix="set"  suffixOverrides=",">
+        <trim prefix="set" suffixOverrides=",">
             <if test="qiBi != null">
                 user_qibi = #{qiBi},
             </if>
@@ -103,16 +107,16 @@
         WHERE user_id=#{uid}
     </update>
     <update id="qiBiWithdrawal">
-    UPDATE sign_in_user
-    <trim prefix="set" suffixOverrides=",">
-        <if test="balance != null">
-            user_remaining_sum = #{balance},
-        </if>
-        <if test="qiBi != null ">
-            user_qibi = #{qiBi},
-        </if>
-    </trim>
-      WHERE user_name = #{userPhone}
+        UPDATE sign_in_user
+        <trim prefix="set" suffixOverrides=",">
+            <if test="balance != null">
+                user_remaining_sum = #{balance},
+            </if>
+            <if test="qiBi != null ">
+                user_qibi = #{qiBi},
+            </if>
+        </trim>
+        WHERE user_name = #{userPhone}
     </update>
     <update id="balanceWithdrawal">
         UPDATE sign_in_user
@@ -124,11 +128,40 @@
         WHERE user_id=#{uid}
     </update>
 
+    <update id="UpdateUser">
+        UPDATE
+        sign_in_user
+        <trim prefix="set" suffixOverrides=",">
+            <if test="userRemainingSum != null">
+                user_remaining_sum = #{userRemainingSum},
+            </if>
+            <if test="userQiBi != null">
+                user_qibi = #{userQiBi},
+            </if>
+            <if test="userWeiXinName != null and userWeiXinName != '' and userWeiXinName != 'undefined' ">
+                user_weixin_name = #{userWeiXinName},
+            </if>
+            <if test="userWeiXin != null and userWeiXin !='' and userWeiXin != 'undefined' ">
+                user_weixin = #{userWeiXin},
+            </if>
+            <if test="userZhiFUBaoName != null and userZhiFUBaoName != '' and userZhiFUBaoName != 'undefined' ">
+                user_zhifubao_name = #{userZhiFUBaoName},
+            </if>
+            <if test="userZhiFUBao != null and userZhiFUBao != '' and userZhiFUBao != 'undefined' ">
+                user_zhifubao = ${userZhiFUBao},
+            </if>
+            <if test="userVipId != 0">
+                user_vip_id = #{userVipId}
+            </if>
+        </trim>
+        WHERE user_id = #{userId}
+    </update>
+
 
     <select id="getUser" resultMap="UserResultMap">
         SELECT
-	       <include refid="Base_Column_List"/>,
-	       <include refid="Base_Vip_List"/>
+        <include refid="Base_Column_List"/>,
+        <include refid="Base_Vip_List"/>
         FROM
         sign_in_user su
         INNER JOIN sign_in_vip sv ON sv.vip_id=su.user_vip_id
@@ -147,7 +180,7 @@
     </select>
 
     <select id="getInvitationProgress" resultMap="UserResultMap" parameterType="long">
-        select  u.user_invitation_id,v.vip_name,u.user_invitation_code
+        select  u.user_name,u.user_id,v.vip_name,u.user_invitation_code,v.*
         from sign_in_user as u
         INNER JOIN  sign_in_vip as v  ON  v.vip_id = u.user_vip_id
         where u.user_invitation_id = #{invitationCodeId}
@@ -161,6 +194,33 @@
           sign_in_user
         WHERE
           user_name = #{phone}
+    </select>
+    <select id="existCode" resultType="java.lang.String">
+        SELECT
+         user_invitation_code
+        FROM
+        sign_in_user
+        WHERE
+         user_invitation_code=#{invitationCode}
+    </select>
+    <select id="getUid" resultType="java.lang.Long">
+        SELECT
+         user_id
+        FROM
+        sign_in_user
+        WHERE
+         user_invitation_code=#{invitationCode}
+    </select>
+    <select id="getUserList" resultMap="UserResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>,
+        <include refid="Base_Vip_List"/>
+        FROM
+        sign_in_user su
+        INNER JOIN sign_in_vip sv ON sv.vip_id=su.user_vip_id
+        <if test="userName != null and userName != '' ">
+            WHERE user_name like CONCAT('%',#{userName},'%')
+        </if>
     </select>
 
 

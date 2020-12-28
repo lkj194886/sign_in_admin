@@ -36,8 +36,8 @@ public class AliYunUtil {
         request.setSysAction("SendSms");
         request.putQueryParameter("RegionId", "cn-hangzhou");
         request.putQueryParameter("PhoneNumbers", phone);
-        request.putQueryParameter("SignName", "永强购物网");
-        request.putQueryParameter("TemplateCode", "SMS_173766833");
+        request.putQueryParameter("SignName", "趣味app");
+        request.putQueryParameter("TemplateCode", "SMS_205877255");
         int code = RandomCode();
         request.putQueryParameter("TemplateParam", "{\"code\":\""+code+"\"}");
         try {

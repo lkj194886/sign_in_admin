@@ -10,6 +10,33 @@ public class SignInAdvErTiSing {
     private Long advertisingId;
     private String advertisingSrc;
     private Long advertisingStatus;
+    private String advertisingTitle;
+    private String advertisingContent;
+    private String advertisingHref;
+
+    public String getAdvertisingTitle() {
+        return advertisingTitle;
+    }
+
+    public void setAdvertisingTitle(String advertisingTitle) {
+        this.advertisingTitle = advertisingTitle;
+    }
+
+    public String getAdvertisingContent() {
+        return advertisingContent;
+    }
+
+    public void setAdvertisingContent(String advertisingContent) {
+        this.advertisingContent = advertisingContent;
+    }
+
+    public String getAdvertisingHref() {
+        return advertisingHref;
+    }
+
+    public void setAdvertisingHref(String advertisingHref) {
+        this.advertisingHref = advertisingHref;
+    }
 
     public SignInAdvErTiSing(Long advertisingId, String advertisingSrc, Long advertisingStatus) {
         this.advertisingId = advertisingId;
@@ -18,15 +45,6 @@ public class SignInAdvErTiSing {
     }
     public SignInAdvErTiSing(){
 
-    }
-
-    @Override
-    public String toString() {
-        return "SignInAdvErTiSing{" +
-                "advertisingId=" + advertisingId +
-                ", advertisingSrc='" + advertisingSrc + '\'' +
-                ", advertisingStatus=" + advertisingStatus +
-                '}';
     }
 
     public Long getAdvertisingId() {
@@ -51,5 +69,17 @@ public class SignInAdvErTiSing {
 
     public void setAdvertisingStatus(Long advertisingStatus) {
         this.advertisingStatus = advertisingStatus;
+    }
+
+    @Override
+    public String toString() {
+        return "SignInAdvErTiSing{" +
+                "advertisingId=" + advertisingId +
+                ", advertisingSrc='" + advertisingSrc + '\'' +
+                ", advertisingStatus=" + advertisingStatus +
+                ", advertisingTitle='" + advertisingTitle + '\'' +
+                ", advertisingContent='" + advertisingContent + '\'' +
+                ", advertisingHref='" + advertisingHref + '\'' +
+                '}';
     }
 }

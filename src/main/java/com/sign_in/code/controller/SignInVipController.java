@@ -38,8 +38,9 @@ public class SignInVipController {
      * @return
      */
     @RequestMapping("/modifyVip")
-    Result<Map<String,Object>> modifyVip(SignInVip signInVip)
+    Result<Map<String,Object>> modifyVip(@RequestBody SignInVip signInVip)
     {
+//        SignInVip signInVip1 = new SignInVip();
         return signVipService.modifyVip(signInVip);
     }
 
@@ -49,7 +50,7 @@ public class SignInVipController {
      * @return
      */
     @RequestMapping("/addVip")
-    Result<Map<String,Object>> addVip(SignInVip signInVip){
+    Result<Map<String,Object>> addVip(@RequestBody SignInVip signInVip){
         return signVipService.addVip(signInVip);
     }
 

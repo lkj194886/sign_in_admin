@@ -41,7 +41,11 @@ public class UserAdminServiceImpl implements UserAdminService {
     public Result<Map<String, Object>> loginAdmin(String name, String pwd) {
         SignInUserAdmin userAdmin = new SignInUserAdmin();
         userAdmin = userAdminMapper.getUserAdmin(name);
+        if (userAdmin==null){
+            return new Result<>(404,"管理员不存在",null);
+        }
         if (md5Util.verify(pwd,userAdmin.getUserAdminPwd())) {
+
             Map<String, Object> user = new HashMap<>();
             user.put("userAdmin", userAdmin);
             String userJson = JSONObject.toJSONString(user);

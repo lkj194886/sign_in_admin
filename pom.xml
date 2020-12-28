@@ -115,6 +115,7 @@
             <artifactId>aliyun-java-sdk-ecs</artifactId>
             <version>4.17.6</version>
         </dependency>
+        
     </dependencies>
 
     <build>

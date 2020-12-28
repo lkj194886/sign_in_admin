@@ -21,20 +21,66 @@ public class SignInConfig {
     //邀请二维码
     private String invitation;
 
-    public String getDownload() {
-        return download;
+    //app 下载链接
+    private String download_url;
+    //签到活跃奖励
+    private Double configActiveSignIn;
+    //福利活跃奖励
+    private Double configActiveWelfare;
+    //提现兑换率
+    private Double configWithdrawalRate;
+    private Double videoRate;
+    //每天可观看的视频次数
+    private int configVideoCount;
+    //邀请一人添加多少观看视屏次数
+    private int configAddVideoCount;
+
+    public int getConfigAddVideoCount() {
+        return configAddVideoCount;
     }
 
-    public void setDownload(String download) {
-        this.download = download;
+    public void setConfigAddVideoCount(int configAddVideoCount) {
+        this.configAddVideoCount = configAddVideoCount;
     }
 
-    public String getInvitation() {
-        return invitation;
+    public int getConfigVideoCount() {
+        return configVideoCount;
     }
 
-    public void setInvitation(String invitation) {
-        this.invitation = invitation;
+    public void setConfigVideoCount(int configVideoCount) {
+        this.configVideoCount = configVideoCount;
+    }
+
+    public Double getVideoRate() {
+        return videoRate;
+    }
+
+    public void setVideoRate(Double videoRate) {
+        this.videoRate = videoRate;
+    }
+
+    public Double getConfigWithdrawalRate() {
+        return configWithdrawalRate;
+    }
+
+    public void setConfigWithdrawalRate(Double configWithdrawalRate) {
+        this.configWithdrawalRate = configWithdrawalRate;
+    }
+
+    public Long getConfigId() {
+        return configId;
+    }
+
+    public void setConfigId(Long configId) {
+        this.configId = configId;
+    }
+
+    public Double getConfigSignInProps() {
+        return configSignInProps;
+    }
+
+    public void setConfigSignInProps(Double configSignInProps) {
+        this.configSignInProps = configSignInProps;
     }
 
     public String getIndexBackImg() {
@@ -61,6 +107,46 @@ public class SignInConfig {
         this.invitationBackImg = invitationBackImg;
     }
 
+    public String getDownload() {
+        return download;
+    }
+
+    public void setDownload(String download) {
+        this.download = download;
+    }
+
+    public String getInvitation() {
+        return invitation;
+    }
+
+    public void setInvitation(String invitation) {
+        this.invitation = invitation;
+    }
+
+    public String getDownload_url() {
+        return download_url;
+    }
+
+    public void setDownload_url(String download_url) {
+        this.download_url = download_url;
+    }
+
+    public Double getConfigActiveSignIn() {
+        return configActiveSignIn;
+    }
+
+    public void setConfigActiveSignIn(Double configActiveSignIn) {
+        this.configActiveSignIn = configActiveSignIn;
+    }
+
+    public Double getConfigActiveWelfare() {
+        return configActiveWelfare;
+    }
+
+    public void setConfigActiveWelfare(Double configActiveWelfare) {
+        this.configActiveWelfare = configActiveWelfare;
+    }
+
     @Override
     public String toString() {
         return "SignInConfig{" +
@@ -71,22 +157,13 @@ public class SignInConfig {
                 ", invitationBackImg='" + invitationBackImg + '\'' +
                 ", download='" + download + '\'' +
                 ", invitation='" + invitation + '\'' +
+                ", download_url='" + download_url + '\'' +
+                ", configActiveSignIn=" + configActiveSignIn +
+                ", configActiveWelfare=" + configActiveWelfare +
+                ", configWithdrawalRate=" + configWithdrawalRate +
+                ", videoRate=" + videoRate +
+                ", configVideoCount=" + configVideoCount +
+                ", configAddVideoCount=" + configAddVideoCount +
                 '}';
-    }
-
-    public Long getConfigId() {
-        return configId;
-    }
-
-    public void setConfigId(Long configId) {
-        this.configId = configId;
-    }
-
-    public Double getConfigSignInProps() {
-        return configSignInProps;
-    }
-
-    public void setConfigSignInProps(Double configSignInProps) {
-        this.configSignInProps = configSignInProps;
     }
 }

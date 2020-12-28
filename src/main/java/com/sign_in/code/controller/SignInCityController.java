@@ -26,9 +26,9 @@ public class SignInCityController {
     CityService cityService;
 
     @RequestMapping("/getCity")
-
     String getCity(String city) throws Exception {
         String cid = ReadJsonUtil.getCityCode(city);
         return cityService.getCity(cid);
     }
+
 }

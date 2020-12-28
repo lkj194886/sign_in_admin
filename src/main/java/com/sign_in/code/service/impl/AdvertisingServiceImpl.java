@@ -1,5 +1,7 @@
 package com.sign_in.code.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.sign_in.code.entity.SignInAdvErTiSing;
 import com.sign_in.code.mapper.AdvertisingMapper;
 import com.sign_in.code.service.AdvertisingService;
@@ -9,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -42,5 +45,28 @@ public class AdvertisingServiceImpl implements AdvertisingService {
         }
 
         return new Result<>(500, "处理失败", null);
+    }
+
+    @Override
+    public Result<Map<String, Object>> getAdvertisingList(String title,Integer pageNum) {
+        PageHelper.startPage(pageNum,5);
+        List<SignInAdvErTiSing> list = advertisingMapper.getAdvertisingList(title);
+        if (list!=null){
+            PageInfo<SignInAdvErTiSing> pageInfo = new PageInfo<>(list);
+            Map<String,Object> map = new HashMap<>();
+            map.put("pageInfo",pageInfo);
+            return new Result<>(200,"处理成功",map);
+        }
+        return new Result<>(500,"处理失败",null);
+    }
+
+    @Override
+    public int modifyAdvErTiSing(SignInAdvErTiSing signInAdvErTiSing) {
+        return advertisingMapper.modifyAdvErTiSing(signInAdvErTiSing);
+    }
+
+    @Override
+    public int addAdvErTiSing(SignInAdvErTiSing signInAdvErTiSing) {
+        return advertisingMapper.addAdvErTiSing(signInAdvErTiSing);
     }
 }

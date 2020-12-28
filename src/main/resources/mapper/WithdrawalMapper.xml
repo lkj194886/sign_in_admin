@@ -2,30 +2,74 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sign_in.code.mapper.WithdrawalMapper">
-<resultMap id="WithdrawalMap" type="com.sign_in.code.entity.SignWithdrawal">
-    <id column="withdrawal_id" property="withdrawalId"/>
-    <result column="withdrawal_sum" property="withdrawalSum"/>
-    <result column="withdrawal_date" property="withdrawalDate"/>
-    <result column="withdrawal_user_id" property="withdrawalUserId"/>
-    <result column="withdrawal_status" property="withdrawalStatus"/>
-</resultMap>
+    <resultMap id="WithdrawalMap" type="com.sign_in.code.entity.SignWithdrawal">
+        <id column="withdrawal_id" property="withdrawalId"/>
+        <result column="withdrawal_sum" property="withdrawalSum"/>
+        <result column="withdrawal_date" property="withdrawalDate"/>
+        <result column="withdrawal_user_id" property="withdrawalUserId"/>
+        <result column="withdrawal_status" property="withdrawalStatus"/>
+        <result column="withdrawal_account_type" property="account_type"/>
+    </resultMap>
     <sql id="Base_Withdrawal_list">
         withdrawal_id,
         withdrawal_sum,
         withdrawal_date,
         withdrawal_user_id,
-        withdrawal_status
+        withdrawal_status,
+        withdrawal_account_type
     </sql>
     <insert id="balanceWithdrawal">
-        INSERT INTO sign_in_withdrawal ( `withdrawal_sum`, `withdrawal_date`, `withdrawal_user_id`, `withdrawal_status` )
+        INSERT INTO sign_in_withdrawal ( `withdrawal_sum`, `withdrawal_date`, `withdrawal_user_id`, `withdrawal_status`,`withdrawal_account_type` )
         VALUES
 	    (
 		    #{balance},
 		    NOW(),
 	        #{uid},
-	        #{status}
+	        #{status},
+	        #{account_type}
 	    )
     </insert>
+    <update id="modifyWithdrawal">
+        UPDATE
+        sign_in_withdrawal
+        <trim prefix="set" suffixOverrides=",">
+            <if test="status != null and status != '' ">
+                withdrawal_status=#{status},
+            </if>
+        </trim>
+        WHERE withdrawal_id=#{wid}
+    </update>
+    <select id="getList" resultMap="WithdrawalMap">
+        SELECT
+        <include refid="Base_Withdrawal_list"/>
+        FROM
+        sign_in_withdrawal
+        WHERE
+        withdrawal_user_id = #{uid}
+    </select>
+    <select id="getListAll" resultMap="WithdrawalMap">
+        SELECT
+        <include refid="Base_Withdrawal_list"></include>
+        FROM
+        sign_in_withdrawal
+        <if test="uid != null and uid !=0">
+            WHERE withdrawal_user_id=#{uid}
+        </if>
+    </select>
+    <select id="getWithdrawal" resultMap="WithdrawalMap">
+        SELECT
+        <include refid="Base_Withdrawal_list"></include>
+        FROM
+        sign_in_withdrawal
+        WHERE withdrawal_id=#{wid}
+    </select>
+    <select id="getWithdrawal2" resultMap="WithdrawalMap">
+        SELECT
+        <include refid="Base_Withdrawal_list"></include>
+        FROM sign_in_withdrawal
+        WHERE sign_in_withdrawal.withdrawal_user_id = #{uid} AND withdrawal_sum &lt; 0.4 and withdrawal_status = '审核中'
+        ORDER BY withdrawal_date DESC LIMIT 1
+    </select>
 
 
 </mapper>

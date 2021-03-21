@@ -23,8 +23,8 @@ import java.util.Random;
  */
 @Component
 public class AliYunUtil {
-    private final String AccessKey_ID="LTAI4FiKXjaHh9Wk1yQjNseY";
-    private final String AccessKey_Secret="iEOskFoHsw4Je6BI9lcrfnsa1Mm91j";
+    private final String AccessKey_ID="";
+    private final String AccessKey_Secret="";
     public int aliYunCode(String phone){
         DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou", AccessKey_ID,AccessKey_Secret);
         IAcsClient client = new DefaultAcsClient(profile);
